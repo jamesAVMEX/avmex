@@ -1,0 +1,841 @@
+.version.eventos /* version checker */
+{
+	color: #0000EE;
+	background-color: #8F513E;
+}
+
+#page
+{
+	z-index: 1;
+	width: 1100px;
+	min-height: 500px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #000000;
+	background-color: transparent;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pu75
+{
+	width: 0.01px;
+	padding-bottom: 0px;
+	margin-right: -10000px;
+	margin-top: -37px;
+	margin-left: -100px;
+}
+
+#u75
+{
+	z-index: 2;
+	min-height: 59px;
+	padding-bottom: 10px;
+}
+
+#u75_align_to_page
+{
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	width: 1100px;
+	left: -100px;
+}
+
+#u121
+{
+	z-index: 3;
+	width: 55px;
+	height: 51px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 8px;
+	left: 112px;
+}
+
+#pmenuu146
+{
+	width: 0.01px;
+	margin-right: -10000px;
+	margin-top: 15px;
+	margin-left: 439px;
+}
+
+#menuu146
+{
+	z-index: 4;
+	width: 419px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u147
+{
+	width: 89px;
+	min-height: 34px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u150
+{
+	width: 89px;
+	padding-bottom: 17px;
+	position: relative;
+}
+
+#u150:hover
+{
+	width: 89px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u150.MuseMenuActive
+{
+	width: 89px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u153-4
+{
+	width: 56px;
+	min-height: 17px;
+	position: relative;
+	margin-right: -10000px;
+	top: 8px;
+	left: 16px;
+}
+
+#u150:hover #u153-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 56px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u150.MuseMenuActive #u153-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 56px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u154
+{
+	width: 93px;
+	min-height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 91px;
+}
+
+#u155
+{
+	width: 93px;
+	padding-bottom: 17px;
+	position: relative;
+}
+
+#u155.MuseMenuActive
+{
+	width: 93px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u158-4
+{
+	width: 60px;
+	min-height: 17px;
+	position: relative;
+	margin-right: -10000px;
+	top: 8px;
+	left: 16px;
+}
+
+#u155:hover #u158-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 60px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u155.MuseMenuActive #u158-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 60px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u161
+{
+	width: 109px;
+	min-height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 186px;
+}
+
+#u162
+{
+	width: 109px;
+	padding-bottom: 17px;
+	position: relative;
+}
+
+#u162.MuseMenuActive
+{
+	width: 109px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u165-4
+{
+	width: 76px;
+	min-height: 17px;
+	position: relative;
+	margin-right: -10000px;
+	top: 8px;
+	left: 16px;
+}
+
+#u162:hover #u165-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 76px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u162.MuseMenuActive #u165-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 76px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u168
+{
+	width: 122px;
+	min-height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 297px;
+}
+
+#u169
+{
+	width: 122px;
+	padding-bottom: 17px;
+	position: relative;
+}
+
+#u169.MuseMenuActive
+{
+	width: 122px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u171-4
+{
+	width: 90px;
+	min-height: 17px;
+	position: relative;
+	margin-right: -10000px;
+	top: 8px;
+	left: 16px;
+}
+
+#u169:hover #u171-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 90px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u169.MuseMenuActive #u171-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 17px;
+	width: 90px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u175
+{
+	z-index: 29;
+	width: 1px;
+	height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 90px;
+}
+
+#u176
+{
+	z-index: 30;
+	width: 1px;
+	height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 185px;
+}
+
+#u177
+{
+	z-index: 31;
+	width: 1px;
+	height: 34px;
+	position: relative;
+	margin-right: -10000px;
+	left: 295px;
+}
+
+.js body
+{
+	visibility: hidden;
+}
+
+.js body.initialized
+{
+	visibility: visible;
+}
+
+#u75-bw
+{
+	z-index: 2;
+	min-height: 59px;
+}
+
+#pu331
+{
+	width: 0.01px;
+	margin-top: -1px;
+}
+
+#u331
+{
+	z-index: 69;
+	height: 850px;
+	opacity: 0.26;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=26)";
+	filter: alpha(opacity=26);
+	background: transparent url("../images/img_center_eventos.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+#u331-bw
+{
+	z-index: 69;
+	height: 850px;
+}
+
+#u808
+{
+	z-index: 70;
+	height: 1003px;
+	opacity: 0.26;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=26)";
+	filter: alpha(opacity=26);
+	background: transparent url("../images/img_center_eventos.jpg") repeat center center;
+}
+
+#u808-bw
+{
+	z-index: 70;
+	height: 1003px;
+}
+
+#u364
+{
+	z-index: 71;
+	width: 338px;
+	background-color: #000000;
+	padding-bottom: 25px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 304px;
+	left: 842px;
+}
+
+#u825
+{
+	z-index: 112;
+	width: 246px;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 26px;
+	left: 45px;
+}
+
+#u835-4
+{
+	z-index: 114;
+	width: 133px;
+	min-height: 21px;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 193px;
+	left: 115px;
+}
+
+#u822
+{
+	z-index: 72;
+	width: 338px;
+	background-color: #000000;
+	padding-bottom: 34px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 628px;
+	left: 118px;
+}
+
+#u357
+{
+	z-index: 109;
+	width: 283px;
+	height: 228px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 35px;
+	left: 27px;
+	background: #000000 url("../images/south-africa-conference-bw.jpg") no-repeat center center;
+	background-size: cover;
+}
+
+#u838
+{
+	z-index: 73;
+	width: 338px;
+	background-color: #000000;
+	padding-bottom: 51px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 628px;
+	left: 482px;
+}
+
+#u328
+{
+	z-index: 89;
+	width: 340px;
+	min-height: 195px;
+	border-width: 0px;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 51px;
+	left: -1px;
+}
+
+#u844
+{
+	z-index: 74;
+	width: 338px;
+	background-color: #000000;
+	padding-bottom: 51px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 628px;
+	left: 842px;
+}
+
+#u326
+{
+	z-index: 88;
+	width: 340px;
+	min-height: 195px;
+	border-width: 0px;
+	border-color: transparent;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 51px;
+	left: -1px;
+}
+
+#u365
+{
+	z-index: 75;
+	width: 338px;
+	height: 297px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 304px;
+	left: 480px;
+	background: #000000 url("../images/world-coference-2017-be.jpg") no-repeat center center;
+	background-size: contain;
+}
+
+#u346
+{
+	z-index: 76;
+	width: 1060px;
+	border-width: 0px;
+	border-color: transparent;
+	background-color: #000000;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 31px;
+	left: 120px;
+}
+
+#u346_position_content
+{
+	padding-top: 33px;
+	width: 100%;
+}
+
+#pu303
+{
+	width: 0.01px;
+	margin-left: 28px;
+}
+
+#u303
+{
+	z-index: 87;
+	vertical-align: top;
+	width: 92px;
+	height: 131px;
+	position: relative;
+	margin-right: -10000px;
+	background: url("../images/victory-outreach-solid-window-logo-u303.png") no-repeat 0px 0px;
+}
+
+#u344-4
+{
+	z-index: 90;
+	width: 495px;
+	min-height: 82px;
+	background-color: transparent;
+	line-height: 144px;
+	color: #FFFFFF;
+	font-size: 120px;
+	text-align: center;
+	font-family: fredericka-the-great, sans-serif;
+	font-weight: 400;
+	position: relative;
+	margin-right: -10000px;
+	left: 130px;
+}
+
+#u796
+{
+	z-index: 111;
+	width: 1061px;
+	height: 15px;
+	background-color: #C1272D;
+	left: -1px;
+	margin-top: 17px;
+	position: relative;
+}
+
+#u353
+{
+	z-index: 94;
+	width: 340px;
+	background-color: #88B200;
+	padding-bottom: 8px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 267px;
+	left: 841px;
+}
+
+#u355-4
+{
+	z-index: 97;
+	width: 335px;
+	min-height: 17px;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 4px;
+	left: 1px;
+}
+
+#u354
+{
+	z-index: 95;
+	width: 341px;
+	background-color: #88B200;
+	padding-bottom: 8px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 267px;
+	left: 479px;
+}
+
+#u356-4
+{
+	z-index: 101;
+	width: 335px;
+	min-height: 17px;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 4px;
+	left: 3px;
+}
+
+#u373
+{
+	z-index: 96;
+	width: 341px;
+	background-color: #88B200;
+	padding-bottom: 8px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 267px;
+	left: 119px;
+}
+
+#u372-4
+{
+	z-index: 105;
+	width: 335px;
+	min-height: 17px;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 4px;
+	left: 3px;
+}
+
+#u374
+{
+	z-index: 110;
+	width: 341px;
+	height: 297px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 304px;
+	left: 119px;
+	background: #000000 url("../images/mexico%20new%20flyer%20bw.jpg") no-repeat center center;
+	background-size: contain;
+}
+
+#u293
+{
+	z-index: 77;
+	width: 370px;
+	border-style: solid;
+	border-width: 8px;
+	border-color: #000000;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 702px;
+	left: 1404px;
+	padding: 30px 28px 74.10000000000014px 26px;
+}
+
+#u295-8
+{
+	z-index: 78;
+	width: 272px;
+	min-height: 150px;
+	background-color: transparent;
+	text-align: center;
+	color: #000000;
+	font-family: Times, Times New Roman, Georgia, serif;
+	margin-left: 50px;
+	position: relative;
+}
+
+#u295-2
+{
+	font-size: 30px;
+	line-height: 36px;
+}
+
+#u295-4,#u295-6
+{
+	font-size: 40px;
+	line-height: 48px;
+}
+
+#u296
+{
+	z-index: 86;
+	width: 370px;
+	height: 37px;
+	background-color: #000000;
+	margin-top: 29px;
+	position: relative;
+}
+
+#u187
+{
+	z-index: 32;
+	width: 1303px;
+	padding-bottom: 101px;
+	margin-bottom: -177px;
+	position: relative;
+	margin-right: -10000px;
+	left: -99px;
+}
+
+#u212
+{
+	z-index: 55;
+	width: 55px;
+	height: 51px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 47px;
+	left: 126px;
+}
+
+#u447
+{
+	z-index: 62;
+	width: 1px;
+	height: 91px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 30px;
+	left: 182px;
+}
+
+#pu209-12
+{
+	width: 0.01px;
+	margin-right: -10000px;
+	margin-top: 29px;
+	margin-left: 189px;
+}
+
+#u209-12
+{
+	z-index: 33;
+	width: 258px;
+	min-height: 98px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u449-4
+{
+	z-index: 65;
+	width: 255px;
+	min-height: 23px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 86px;
+	left: 2px;
+}
+
+#u448
+{
+	z-index: 63;
+	width: 1px;
+	height: 91px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 30px;
+	left: 466px;
+}
+
+#u819-10
+{
+	z-index: 45;
+	width: 282px;
+	min-height: 98px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 29px;
+	left: 485px;
+}
+
+#u450
+{
+	z-index: 64;
+	width: 1px;
+	height: 91px;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 30px;
+	left: 828px;
+}
+
+#pu429
+{
+	width: 0.01px;
+	padding-bottom: 1px;
+	margin-right: -10000px;
+	margin-top: 37px;
+	margin-left: 851px;
+}
+
+#u429
+{
+	z-index: 56;
+	width: 26px;
+	position: relative;
+}
+
+#u435
+{
+	z-index: 58;
+	width: 26px;
+	margin-top: 1px;
+	position: relative;
+}
+
+#u441
+{
+	z-index: 60;
+	width: 26px;
+	position: relative;
+}
+
+#muse_css_mq,.html
+{
+	background-color: #FFFFFF;
+}
+
+body
+{
+	position: relative;
+	min-width: 1100px;
+	padding-top: 36px;
+	padding-bottom: 179px;
+}
+
+.verticalspacer
+{
+	min-height: 1px;
+}
+

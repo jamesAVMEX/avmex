@@ -1,0 +1,49 @@
+<manifest alg="2" build="2015.1.1.343" opt="false" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="www.avmex.org" resolutions="1x" timestamp="1460487738492">
+  <folder name="css">
+    <file name="site_global.css" crc="131700929"/>
+    <file name="master_a-master.css" crc="3926036594" ref="conferencia:eventos:index:contacto:vision:poster"/>
+    <file name="conferencia.css" crc="4001187110" ref="conferencia"/>
+    <file name="eventos.css" crc="4002369854" ref="eventos"/>
+    <file name="index.css" crc="3793654026" ref="index"/>
+    <file name="contacto.css" crc="3964287152" ref="contacto"/>
+    <file name="vision.css" crc="4132512462" ref="vision"/>
+    <file name="poster.css" crc="397717343" ref="poster"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="484278746" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="museutils.js" crc="531812214" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="whatinput.js" crc="84559013" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="120190942" ref="index:vision:eventos"/>
+    <file name="jquery.musemenu.js" crc="3902934130" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="jquery.watch.js" crc="3866665977" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="pie.js" crc="3827607177" ref="index:vision:conferencia"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:vision:eventos:contacto:conferencia:poster"/>
+  </folder>
+  <folder name="images">
+    <file name="victory-outreach-gold-window-logo.png" crc="3775136677" ref="index"/>
+    <file name="img_top_home.jpg" crc="112460997" ref="index"/>
+    <file name="photo-1422157245273-e08b638b4b00.jpg" crc="529974403" ref="index"/>
+    <file name="img_new gen.jpg" crc="4108829854" seo="true" ref="index"/>
+    <file name="facebook azul.png" crc="22643514" seo="true" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="twitter azul.png" crc="517661030" seo="true" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="instagram azul.png" crc="3925815853" seo="true" ref="index:vision:eventos:contacto:conferencia:poster"/>
+    <file name="img_top_vision.jpg" crc="3842171614" ref="vision"/>
+    <file name="norwaydock.jpg" crc="492531438" ref="vision"/>
+    <file name="band1.png" crc="4197749231" seo="true" ref="vision"/>
+    <file name="img_center_eventos.jpg" crc="4035475685" ref="eventos"/>
+    <file name="south-africa-conference-bw.jpg" crc="273770016" ref="eventos"/>
+    <file name="world-coference-2017-be.jpg" crc="455329349" ref="eventos"/>
+    <file name="victory-outreach-solid-window-logo-u303.png" crc="3803677011" ref="eventos"/>
+    <file name="mexico new flyer bw.jpg" crc="78862902" ref="eventos"/>
+    <file name="mexico new flyer 2.jpg" crc="3822194932" seo="true" ref="poster"/>
+    <file name="9febc-bcc-logo.jpg" crc="201375284" seo="true" ref="conferencia"/>
+    <file name="poster esp.jpg" crc="391184197" seo="true" ref="conferencia"/>
+    <file name="voi-poster-r4h-small1.jpg" crc="3974957294" seo="true" ref="eventos"/>
+  </folder>
+  <file name="index.html" crc="4169595209" seo="true" mt="1460487197781" redirect="true"/>
+  <file name="vision.html" crc="4135222641" seo="true" mt="1460487197781" redirect="true"/>
+  <file name="eventos.html" crc="4084351084" seo="true" mt="1460487478826" redirect="true"/>
+  <file name="contacto.html" crc="260558518" seo="true" mt="1460487197781" redirect="true"/>
+  <file name="conferencia.html" crc="4148563915" seo="true" mt="1460487679218" redirect="true"/>
+  <file name="poster.html" crc="93967158" seo="true" mt="1460487197781" redirect="true"/>
+</manifest>
