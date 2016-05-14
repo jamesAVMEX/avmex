@@ -12,6 +12,13 @@
 
 #u153-4
 {
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transition-timing-function: ease;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease;
+	background-image: url("../images/blank.gif");
 	border-width: 0px;
 	border-color: transparent;
 	background-color: transparent;
@@ -38,6 +45,13 @@
 
 #u158-4
 {
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transition-timing-function: ease;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease;
+	background-image: url("../images/blank.gif");
 	border-width: 0px;
 	border-color: transparent;
 	background-color: transparent;
@@ -64,6 +78,13 @@
 
 #u165-4
 {
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transition-timing-function: ease;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease;
+	background-image: url("../images/blank.gif");
 	border-width: 0px;
 	border-color: transparent;
 	background-color: transparent;
@@ -90,6 +111,13 @@
 
 #u171-4
 {
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-delay: 0.2s;
+	-webkit-transition-timing-function: ease;
+	transition-duration: 0.2s;
+	transition-delay: 0.2s;
+	transition-timing-function: ease;
+	background-image: url("../images/blank.gif");
 	border-width: 0px;
 	border-color: transparent;
 	background-color: transparent;
@@ -131,7 +159,7 @@
 	background-size: contain;
 }
 
-#u209-12,#u449-4,#u819-10
+#u209-8,#u449-4,#u819-14
 {
 	background-color: transparent;
 	color: #FFFFFF;

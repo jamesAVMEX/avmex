@@ -1,7 +1,7 @@
 .version.conferencia /* version checker */
 {
-	color: #0000EE;
-	background-color: #7D4526;
+	color: #000001;
+	background-color: #4E8A06;
 }
 
 #page
@@ -345,7 +345,7 @@
 	top: -1px;
 	margin-bottom: -1px;
 	position: relative;
-	padding: 13px 100px 18px 101px;
+	padding: 13px 100px 355px 101px;
 }
 
 #ppu493
@@ -404,7 +404,7 @@
 
 #u496-4
 {
-	z-index: 83;
+	z-index: 82;
 	width: 111px;
 	min-height: 42px;
 	background-color: transparent;
@@ -419,12 +419,12 @@
 
 #u503-4
 {
-	z-index: 99;
+	z-index: 94;
 	width: 215px;
 	min-height: 42px;
 	background-color: transparent;
-	line-height: 29px;
-	font-size: 24px;
+	line-height: 24px;
+	font-size: 20px;
 	color: #FFFFFF;
 	font-family: cagliostro, sans-serif;
 	font-weight: 400;
@@ -453,7 +453,7 @@
 
 #u505-4
 {
-	z-index: 87;
+	z-index: 86;
 	width: 111px;
 	min-height: 42px;
 	background-color: transparent;
@@ -468,12 +468,12 @@
 
 #u506-4
 {
-	z-index: 103;
+	z-index: 98;
 	width: 317px;
 	min-height: 42px;
 	background-color: transparent;
-	line-height: 29px;
-	font-size: 24px;
+	line-height: 24px;
+	font-size: 20px;
 	color: #FFFFFF;
 	font-family: cagliostro, sans-serif;
 	font-weight: 400;
@@ -500,7 +500,7 @@
 
 #u508-4
 {
-	z-index: 91;
+	z-index: 90;
 	width: 111px;
 	min-height: 42px;
 	background-color: transparent;
@@ -513,14 +513,14 @@
 	margin-right: -10000px;
 }
 
-#u509-6
+#u509-11
 {
-	z-index: 107;
-	width: 427px;
+	z-index: 102;
+	width: 445px;
 	min-height: 42px;
 	background-color: transparent;
-	line-height: 29px;
-	font-size: 24px;
+	line-height: 24px;
+	font-size: 20px;
 	color: #FFFFFF;
 	font-family: cagliostro, sans-serif;
 	font-weight: 400;
@@ -535,41 +535,8 @@
 	width: 616px;
 	height: 2px;
 	background-color: #FFFFFF;
-	margin-top: 4px;
+	margin-top: 43px;
 	position: relative;
-}
-
-#pu513
-{
-	width: 0.01px;
-	margin-top: 41px;
-}
-
-#u513
-{
-	z-index: 82;
-	width: 616px;
-	height: 2px;
-	background-color: #FFFFFF;
-	position: relative;
-	margin-right: -10000px;
-	margin-top: 35px;
-}
-
-#u511-4
-{
-	z-index: 95;
-	width: 381px;
-	min-height: 42px;
-	background-color: transparent;
-	line-height: 38px;
-	color: #969696;
-	font-size: 32px;
-	text-align: left;
-	font-family: cagliostro, sans-serif;
-	font-weight: 400;
-	position: relative;
-	margin-right: -10000px;
 }
 
 #u881
@@ -585,8 +552,8 @@
 #pu549
 {
 	width: 0.01px;
-	margin-left: 742px;
-	margin-top: 16px;
+	margin-left: 2px;
+	margin-top: 88px;
 }
 
 #u549
@@ -600,6 +567,17 @@
 	filter: alpha(opacity=28.000000000000004);
 	position: relative;
 	margin-right: -10000px;
+	left: 740px;
+}
+
+#u541
+{
+	z-index: 113;
+	width: 298px;
+	background-color: transparent;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 7px;
 }
 
 #u547
@@ -612,7 +590,7 @@
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 20px;
-	left: 51px;
+	left: 792px;
 }
 
 #u548-4
@@ -621,25 +599,15 @@
 	width: 192px;
 	min-height: 27px;
 	background-color: transparent;
-	line-height: 40px;
-	font-size: 33px;
 	text-align: center;
+	font-size: 33px;
+	line-height: 40px;
 	font-family: acme, sans-serif;
 	font-weight: 400;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 5px;
 	left: 22px;
-}
-
-#u541
-{
-	z-index: 113;
-	width: 298px;
-	background-color: transparent;
-	margin-left: 764px;
-	margin-top: 251px;
-	position: relative;
 }
 
 #u470
@@ -651,7 +619,7 @@
 	border-color: transparent;
 	background-color: transparent;
 	margin-left: 1px;
-	margin-top: 16px;
+	margin-top: 12px;
 	position: relative;
 }
 
@@ -659,7 +627,7 @@
 {
 	z-index: 32;
 	width: 1303px;
-	padding-bottom: 101px;
+	padding-bottom: 108px;
 	left: -99px;
 	position: relative;
 }
@@ -686,7 +654,7 @@
 	left: 182px;
 }
 
-#pu209-12
+#pu209-8
 {
 	width: 0.01px;
 	margin-right: -10000px;
@@ -694,7 +662,7 @@
 	margin-left: 189px;
 }
 
-#u209-12
+#u209-8
 {
 	z-index: 33;
 	width: 258px;
@@ -710,7 +678,7 @@
 	min-height: 23px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 86px;
+	margin-top: 56px;
 	left: 2px;
 }
 
@@ -725,9 +693,9 @@
 	left: 466px;
 }
 
-#u819-10
+#u819-14
 {
-	z-index: 45;
+	z-index: 41;
 	width: 282px;
 	min-height: 98px;
 	position: relative;

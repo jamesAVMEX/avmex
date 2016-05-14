@@ -1,7 +1,7 @@
 .version.poster /* version checker */
 {
-	color: #000017;
-	background-color: #B4AF5F;
+	color: #00001C;
+	background-color: #864DEA;
 }
 
 #page
@@ -328,21 +328,21 @@
 	z-index: 69;
 	width: 1298px;
 	background-color: #000000;
-	padding-bottom: 12px;
+	padding-bottom: 27px;
 	left: -100px;
 	top: -2px;
 	margin-bottom: -2px;
 	position: relative;
 }
 
-#u855
+#u1656
 {
 	z-index: 70;
-	width: 1100px;
+	width: 1108px;
 	background-color: transparent;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 37px;
+	margin-top: 10px;
 	left: 100px;
 }
 
@@ -350,7 +350,7 @@
 {
 	z-index: 32;
 	width: 1303px;
-	padding-bottom: 101px;
+	padding-bottom: 108px;
 	left: -99px;
 	margin-top: 1px;
 	position: relative;
@@ -378,7 +378,7 @@
 	left: 182px;
 }
 
-#pu209-12
+#pu209-8
 {
 	width: 0.01px;
 	margin-right: -10000px;
@@ -386,7 +386,7 @@
 	margin-left: 189px;
 }
 
-#u209-12
+#u209-8
 {
 	z-index: 33;
 	width: 258px;
@@ -402,7 +402,7 @@
 	min-height: 23px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 87px;
+	margin-top: 56px;
 	left: 2px;
 }
 
@@ -417,9 +417,9 @@
 	left: 466px;
 }
 
-#u819-10
+#u819-14
 {
-	z-index: 45;
+	z-index: 41;
 	width: 282px;
 	min-height: 98px;
 	position: relative;

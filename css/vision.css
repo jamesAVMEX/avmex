@@ -1,7 +1,7 @@
 .version.vision /* version checker */
 {
-	color: #0000F6;
-	background-color: #5122CE;
+	color: #0000E5;
+	background-color: #E70BBE;
 }
 
 #page
@@ -337,7 +337,7 @@
 	height: 400px;
 	position: relative;
 	margin-right: -10000px;
-	background: transparent url("../images/img_top_vision.jpg") no-repeat center center;
+	background: transparent url("../images/img_top_vision1.jpg") no-repeat center center;
 	background-size: cover;
 }
 
@@ -399,12 +399,12 @@
 	width: 382px;
 	min-height: 82px;
 	background-color: transparent;
+	text-align: center;
+	font-size: 72px;
 	line-height: 86px;
 	color: #C1272D;
-	font-size: 72px;
-	text-align: center;
 	font-family: allura, cursive;
-	font-weight: 700;
+	font-weight: 400;
 	position: relative;
 	margin-right: -10000px;
 	margin-top: 36px;
@@ -417,9 +417,9 @@
 	width: 940px;
 	min-height: 354px;
 	background-color: transparent;
-	line-height: 29px;
-	font-size: 24px;
 	text-align: justify;
+	font-size: 24px;
+	line-height: 29px;
 	font-family: buda, serif;
 	font-weight: 300;
 	margin-left: 80px;
@@ -433,12 +433,12 @@
 	width: 382px;
 	min-height: 82px;
 	background-color: transparent;
+	text-align: center;
+	font-size: 72px;
 	line-height: 86px;
 	color: #3E8C00;
-	font-size: 72px;
-	text-align: center;
 	font-family: allura, cursive;
-	font-weight: 700;
+	font-weight: 400;
 	margin-left: 361px;
 	margin-top: 28px;
 	position: relative;
@@ -450,8 +450,8 @@
 	width: 1050px;
 	min-height: 82px;
 	background-color: transparent;
-	line-height: 29px;
 	font-size: 24px;
+	line-height: 29px;
 	font-family: buda, serif;
 	font-weight: 300;
 	margin-left: 22px;
@@ -468,7 +468,7 @@
 {
 	z-index: 32;
 	width: 1303px;
-	padding-bottom: 101px;
+	padding-bottom: 108px;
 	left: -99px;
 	margin-top: 18px;
 	position: relative;
@@ -496,7 +496,7 @@
 	left: 182px;
 }
 
-#pu209-12
+#pu209-8
 {
 	width: 0.01px;
 	margin-right: -10000px;
@@ -504,7 +504,7 @@
 	margin-left: 189px;
 }
 
-#u209-12
+#u209-8
 {
 	z-index: 33;
 	width: 258px;
@@ -520,7 +520,7 @@
 	min-height: 23px;
 	position: relative;
 	margin-right: -10000px;
-	margin-top: 87px;
+	margin-top: 56px;
 	left: 2px;
 }
 
@@ -535,9 +535,9 @@
 	left: 466px;
 }
 
-#u819-10
+#u819-14
 {
-	z-index: 45;
+	z-index: 41;
 	width: 282px;
 	min-height: 98px;
 	position: relative;

@@ -1,4 +1,4 @@
-<manifest alg="2" build="2015.1.2.344" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="www.alcancevictoriamexico.org" resolutions="1x" timestamp="1463248900794">
+<manifest alg="2" build="2015.1.2.344" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="www.alcancevictoriamexico.org" resolutions="1x" timestamp="1463251467764">
   <folder name="css">
     <file name="site_global.css" crc="131700929"/>
     <file name="master_a-master.css" crc="3777483988" ref="vision:poster:eventos:registro:contacto:index:pago:conferencia"/>
