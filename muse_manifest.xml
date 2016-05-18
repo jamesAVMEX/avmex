@@ -1,25 +1,26 @@
-<manifest alg="2" build="2015.1.2.344" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="www.alcancevictoriamexico.org" resolutions="1x" timestamp="1463251467764">
+<manifest alg="2" build="2015.1.2.344" opt="true" iceEnabled="true" iceMarkupVersion="2" iceEnabledOptions="link,responsive" exportTarget="other" domain="www.alcancevictoriamexico.org" resolutions="1x" timestamp="1463599962110">
   <folder name="css">
     <file name="site_global.css" crc="131700929"/>
-    <file name="master_a-master.css" crc="3777483988" ref="vision:poster:eventos:registro:contacto:index:pago:conferencia"/>
-    <file name="vision.css" crc="3857124286" ref="vision"/>
+    <file name="master_a-master.css" crc="3777483988" ref="vision:poster:eventos:registro:contacto:index:conferencia:aprobado:denegado"/>
+    <file name="vision.css" crc="324343688" ref="vision"/>
     <file name="poster.css" crc="478563818" ref="poster"/>
-    <file name="eventos.css" crc="306654106" ref="eventos"/>
+    <file name="eventos.css" crc="136040844" ref="eventos"/>
     <file name="registro.css" crc="58811401" ref="registro"/>
     <file name="contacto.css" crc="149316822" ref="contacto"/>
-    <file name="index.css" crc="4031192061" ref="index"/>
-    <file name="pago.css" crc="3913145575" ref="pago"/>
-    <file name="conferencia.css" crc="21924358" ref="conferencia"/>
+    <file name="index.css" crc="4002370144" ref="index"/>
+    <file name="conferencia.css" crc="477351617" ref="conferencia"/>
+    <file name="aprobado.css" crc="3913145575" ref="aprobado"/>
+    <file name="denegado.css" crc="149316822" ref="denegado"/>
   </folder>
   <folder name="scripts">
-    <file name="jquery-1.8.3.min.js" crc="207176553" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="museutils.js" crc="3790713428" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="whatinput.js" crc="84559013" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="jquery.musepolyfill.bgsize.js" crc="3918880840" ref="index:vision:eventos:registro:pago"/>
-    <file name="jquery.musemenu.js" crc="238543590" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="jquery.watch.js" crc="4244854265" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
+    <file name="jquery-1.8.3.min.js" crc="207176553" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="museutils.js" crc="3790713428" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="whatinput.js" crc="84559013" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="jquery.musepolyfill.bgsize.js" crc="3918880840" ref="index:vision:eventos:registro:aprobado"/>
+    <file name="jquery.musemenu.js" crc="238543590" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="jquery.watch.js" crc="4244854265" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
     <file name="pie.js" crc="3827607177" ref="index:vision:conferencia"/>
-    <file name="html5shiv.js" crc="4241844378" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
   </folder>
   <folder name="images">
     <file name="inicio-favicon.ico" crc="460051916" ref="index"/>
@@ -28,9 +29,9 @@
     <file name="img_top_home_1.jpg" crc="3997102160" ref="index"/>
     <file name="photo-1422157245273-e08b638b4b00.jpg" crc="529974403" ref="index"/>
     <file name="img_new gen.jpg" crc="4108829854" seo="true" ref="index"/>
-    <file name="facebook azul.png" crc="22643514" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="twitter azul.png" crc="517661030" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
-    <file name="instagram azul.png" crc="3925815853" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:pago"/>
+    <file name="facebook azul.png" crc="22643514" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="twitter azul.png" crc="517661030" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
+    <file name="instagram azul.png" crc="3925815853" seo="true" ref="index:vision:eventos:contacto:conferencia:poster:registro:aprobado:denegado"/>
     <file name="vision-favicon.ico" crc="460051916" ref="vision"/>
     <file name="img_top_vision1.jpg" crc="4179888707" ref="vision"/>
     <file name="norwaydock.jpg" crc="492531438" ref="vision"/>
@@ -47,18 +48,19 @@
     <file name="9febc-bcc-logo.jpg" crc="201375284" seo="true" ref="conferencia"/>
     <file name="poster-favicon.ico" crc="460051916" ref="poster"/>
     <file name="poster conferencia gde.jpg" crc="4177381978" seo="true" ref="poster"/>
-    <file name="photo-1427464407917-c817c9a0a6f6.jpg" crc="3954778474" ref="registro:pago"/>
+    <file name="photo-1427464407917-c817c9a0a6f6.jpg" crc="3954778474" ref="registro:aprobado"/>
     <file name="conf_fondo-u1129-fr.jpg" crc="492533835" ref="registro"/>
-    <file name="980009_552188771483308_667298543_o.jpg" crc="185647407" ref="pago"/>
-    <file name="pagar.jpg" crc="4066826426" seo="true" ref="pago"/>
-    <file name="screen_shot_2014-10-15_at_100958-blog-full.jpg" crc="4290819189" seo="true" ref="pago"/>
+    <file name="980009_552188771483308_667298543_o.jpg" crc="185647407" ref="aprobado"/>
+    <file name="pagar.jpg" crc="4066826426" seo="true" ref="aprobado"/>
+    <file name="screen_shot_2014-10-15_at_100958-blog-full.jpg" crc="4290819189" seo="true" ref="aprobado"/>
   </folder>
-  <file name="index.html" crc="3924242148" seo="true" mt="1462346469833" redirect="true"/>
-  <file name="vision.html" crc="4208497886" seo="true" mt="1462172446138" redirect="true"/>
-  <file name="eventos.html" crc="4256890814" seo="true" mt="1462172446138" redirect="true"/>
-  <file name="contacto.html" crc="316154194" seo="true" mt="1462172446138" redirect="true"/>
-  <file name="conferencia.html" crc="441153526" seo="true" mt="1462294918523" redirect="true"/>
-  <file name="poster.html" crc="257085950" seo="true" mt="1462172446138" redirect="true"/>
-  <file name="registro.html" crc="4132147072" seo="true" mt="1462295271662" redirect="true"/>
-  <file name="pago.html" crc="210293105" seo="true" mt="1462172446138" redirect="true"/>
+  <file name="index.html" crc="3950251947" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="vision.html" crc="4282772374" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="eventos.html" crc="3954964997" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="contacto.html" crc="3813381690" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="conferencia.html" crc="4202956522" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="poster.html" crc="4282844531" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="registro.html" crc="238556136" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="aprobado.html" crc="445940292" seo="true" mt="1463597538469" redirect="true"/>
+  <file name="denegado.html" crc="4243630267" seo="true" mt="1463597538469" redirect="true"/>
 </manifest>
