@@ -1,7 +1,7 @@
 .version.eventos /* version checker */
 {
-	color: #000012;
-	background-color: #472B9A;
+	color: #000008;
+	background-color: #1BD18C;
 }
 
 #page
@@ -607,10 +607,10 @@
 	width: 495px;
 	min-height: 82px;
 	background-color: transparent;
-	text-align: center;
-	font-size: 120px;
-	line-height: 144px;
 	color: #FFFFFF;
+	line-height: 144px;
+	font-size: 120px;
+	text-align: center;
 	font-family: fredericka-the-great, sans-serif;
 	font-weight: 400;
 	position: relative;
