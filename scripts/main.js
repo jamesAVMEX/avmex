@@ -4,7 +4,7 @@ require(['crypt', 'jquery'], function (sha1, $) {
     <!--Variables Bancomer -->
 
     $(document).ready(function() {
-    	var Ds_Merchant_Amount = document.getElementById("totalAPagar").innerHTML;
+    	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;
 	    var Ds_Merchant_Currency = 484;
 	    var Ds_Merchant_Order = genOrder();
 	    var Ds_Merchant_MerchantURL ="https://www.alcancevictoriamexico.org/registro.html";
