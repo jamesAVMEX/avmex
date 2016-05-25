@@ -1,0 +1,49 @@
+@charset "utf-8";
+#todo {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#form_izq {
+	width: 500px;
+	height: 500px;
+	background-position: center center;
+	margin-top: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+	background-color: #FFFFFF;
+	opacity: 0.52;
+	top: 0vmax;
+}
+#formulario  {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-box-shadow: 0px 0px #7F7B7B;
+	box-shadow: 0px 0px #7F7B7B;
+	background-size: cover;
+	background-image: url(Imagenes/mex%20post1.png);
+	width: 800px;
+	height: 500px;
+}
+#banner {
+	width: 800px;
+	height: 88px;
+}
+#separacion img {
+	width: 800px;
+	margin: 0;
+	height: 35px;
+}
+
+
+#pie {
+	background-color: #464646;
+	color: #FFFFFF;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+	font-size: 15px;
+	font-weight: lighter;
+	text-align: center;
+}
