@@ -23,25 +23,34 @@
                 <h1 id="Concepto">Conferencia Nacional 2016</h1>
             </div>
 
-            <div class="form-row form-input-name-row">
+            <div class="form-row">
                 <label>
                     <span>Nombre(s):</span>
-                    <input type="text" name="name">
+                    <p id="desplegaNombre"></p>
+                    <input type="text" id="nombres" name="nombres">
                 </label>
             </div>
 
             <div class="form-row form-input-name-row">
                 <label>
                     <span>Apellidos:</span>
-                    <input type="text" name="name">
+                    <p id="desplegaApellidos"></p>
+                    <input type="text" id="apellidos" name="apellidos">
                 </label>
             </div>
 
             <div class="form-row form-input-email-row">
-
                 <label>
                     <span>Email:</span>
-                    <input type="email" name="email" value="email@example.com">
+                    <p id="desplegaEmail"></p>
+                    <input id="email" name="email" value="email@example.com">
+                </label>
+            </div>
+            <div class="form-row">
+                <label>
+                    <span>Teléfono:</span>
+                    <p id="desplegaTelefono"></p>
+                    <input id="telefono" name="telefono">
                 </label>
             </div>
 
@@ -49,7 +58,8 @@
 
                 <label>
                     <span>Iglesia:</span>
-                    <select name="dropdown">
+                    <p id="desplegaIglesia"></p>
+                    <select id="iglesias" name="dropdown">
                         <option value="">  </option>
                         <option value="Otra Iglesia"> Otra Iglesia </option>
                         <option value="Alcance Victoria, Acapulco, Guerrero"> Alcance Victoria, Acapulco, Guerrero </option>
@@ -132,35 +142,79 @@
             <div>
                 <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
             </div>
-            <div id="verificaDatos" class="form-row">
-                <button type="submit" onclick="verificandoDatos()">Siguiente</button>
+            <div id="verificaDatos">
+                <button type="submit" onclick="verificandoDatos(); return false;">Siguiente</button>
+            </div>
+            
+            <div id="regresaIngresa">
+                <button type="submit" onclick="regresaLlenado(); return false;" >Corregir datos</button>
             </div>
 
-             <div id="continuaPago" class="form-row">
+            
+            <div id="continuaPago">
                 <button type="submit">Continuar</button>
-            </div>
-             <div id="regresaIngresa" class="form-row">
-                <button type="submit">Corregir datos</button>
             </div>
         </form>
     </div>
-
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 <script>
-        var divSiguiente = document.getElementById('verificaDatos');
+        /*var divSiguiente = document.getElementById('verificaDatos');
         var divPago = document.getElementById('continuaPago');
-        var divAtras = document.getElementById('regresaIngresa');
-
+        var divAtras = document.getElementById('regresaIngresa');*/
         function verificandoDatos(){
             console.log("ENTRE!");
-            divPago.style.display = "inline";
-            divAtras.style.display = "inline";
-            divSiguiente.style.display = "none";
+            var nombres = document.getElementById('nombres').value;
+            var apellidos = document.getElementById('apellidos').value;
+            var email = document.getElementById('email').value;
+            var telefono = document.getElementById('telefono').value;
+            var iglesias = document.getElementById('iglesias');
+            var iglesiaSeleccionada = iglesias.options[iglesias.selectedIndex].value;
+
+            document.getElementById('desplegaNombre').style.display = "inline-block";
+            document.getElementById('desplegaNombre').style.color = "#ffffff";
+            document.getElementById('desplegaNombre').innerHTML = nombres;
+
+            document.getElementById('desplegaApellidos').style.display = "inline-block";
+            document.getElementById('desplegaApellidos').style.color = "#ffffff";
+            document.getElementById('desplegaApellidos').innerHTML = apellidos;
+
+            document.getElementById('desplegaEmail').style.display = "inline-block";
+            document.getElementById('desplegaEmail').style.color = "#ffffff";
+            document.getElementById('desplegaEmail').innerHTML = email;
+
+            document.getElementById('desplegaTelefono').style.display = "inline-block";
+            document.getElementById('desplegaTelefono').style.color = "#ffffff";
+            document.getElementById('desplegaTelefono').innerHTML = telefono;;
+
+            document.getElementById('desplegaIglesia').style.display = "inline-block";
+            document.getElementById('desplegaIglesia').style.color = "#ffffff";
+            document.getElementById('desplegaIglesia').innerHTML = iglesiaSeleccionada;
+
+            document.getElementById('nombres').style.display = "none";
+            document.getElementById('apellidos').style.display = "none";
+            document.getElementById('email').style.display = "none";
+            document.getElementById('telefono').style.display = "none";
+            document.getElementById('iglesias').style.display = "none";
+            document.getElementById('continuaPago').style.display = "inline-block";
+            document.getElementById('regresaIngresa').style.display = "inline-block";
+            document.getElementById('verificaDatos').style.display = "none";
         }
-    
+
+        function regresaLlenado(){
+            document.getElementById('desplegaNombre').style.display = "none";
+            document.getElementById('desplegaApellidos').style.display = "none";
+            document.getElementById('desplegaEmail').style.display = "none";
+            document.getElementById('desplegaTelefono').style.display = "none"
+            document.getElementById('desplegaIglesia').style.display = "none";
+
+            document.getElementById('nombres').style.display = "inline-block";
+            document.getElementById('apellidos').style.display = "inline-block";
+            document.getElementById('email').style.display = "inline-block";
+            document.getElementById('telefono').style.display = "inline-block";
+            document.getElementById('iglesias').style.display = "inline-block";
+            document.getElementById('regresaIngresa').style.display = "none";
+        }
 </script>
+    
 </body>
 
 </html>

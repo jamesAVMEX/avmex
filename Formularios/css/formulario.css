@@ -10,6 +10,21 @@ html{
     display: inline;
 }
 
+#desplegaNombre{
+    display: none;
+}
+#desplegaApellidos{
+    display: none;
+}
+#desplegaEmail{
+    display: none;
+}
+#desplegaIglesia{
+    display: none;
+}
+#desplegaTelefono{
+    display: none;
+}
 #continuaPago{
     display: none;
 }
