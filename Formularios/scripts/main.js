@@ -42,6 +42,12 @@ require(['crypt', 'jquery'], function (sha1, $) {
                 }
             })
 		 });
+
+		 $("#verificaDatos").click(function(){
+		 	console.log("ENTRE!");
+            
+            })
+		 });
 	});
     
 

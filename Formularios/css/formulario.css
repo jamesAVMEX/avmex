@@ -5,6 +5,12 @@ html{
 #cantidad{
     color:#fff;
 }
+#continuaPago{
+    display: none;
+}
+#regresaIngresa{
+    display: none;
+}
 
 .form-validation{
     box-sizing: border-box;
