@@ -4,7 +4,19 @@
 	margin-left: auto;
 	margin-right: auto;
 }
-
+.framesin{
+      
+      display: inline-block;
+      height: 600px;
+      width: 550px;
+       z-index: 2;
+      float: center;
+      left: 320px;
+      border: 0;
+      overflow: hidden;
+      /*opacity: .9;*/
+      background: #858585;
+ }
 
 #form_izq {
 	width: 500px;
@@ -19,6 +31,7 @@
 	top: 0vmax;
 }
 #formulario  {
+	text-align: center;
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-box-shadow: 0px 0px #7F7B7B;

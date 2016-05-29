@@ -22,7 +22,7 @@ require(['crypt', 'jquery'], function (sha1, $) {
 		console.log(Ds_Merchant_MerchantCode);
 		console.log(Ds_Merchant_MerchantSignature);	
 
-		 $('#input_2').click(function(){
+		 $("#sendBancomer").click(function(){
 		 	console.log("ENTRE!");
             $.ajax({
                 type:"POST",
@@ -41,7 +41,6 @@ require(['crypt', 'jquery'], function (sha1, $) {
 					Ds_Merchant_MerchantSignature : Ds_Merchant_MerchantSignature
                 }
             })
-		 	
 		 });
 	});
     
