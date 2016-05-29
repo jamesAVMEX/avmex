@@ -1,7 +1,4 @@
 require(['crypt', 'jquery'], function (sha1, $) {
-   console.log(document);
-   console.log($);
-    <!--Variables Bancomer -->
 
     $(document).ready(function() {
     	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;

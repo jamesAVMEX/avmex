@@ -9,12 +9,11 @@
       display: inline-block;
       height: 750px;
       width: 800px;
-       z-index: 2;
+       z-index: 100;
       float: center;
       left: 320px;
       border: 0;
       overflow: hidden;
-      opacity: .9;
  }
 
 #form_izq {
