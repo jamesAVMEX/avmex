@@ -1,6 +1,6 @@
 require(['crypt', 'jquery'], function (sha1, $) {
 
-
+	$(document).ready(function(){
     	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;
 	    var Ds_Merchant_Currency = 484;
 	    var Ds_Merchant_Order = genOrder();
@@ -37,7 +37,8 @@ require(['crypt', 'jquery'], function (sha1, $) {
 					Ds_Merchant_MerchantSignature : Ds_Merchant_MerchantSignature
                 }
             })
-		 });
+		 })
+	});
 
    
     function genOrder(){
