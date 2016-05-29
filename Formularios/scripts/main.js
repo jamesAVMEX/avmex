@@ -2,7 +2,6 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
    //console.log(document);
     <!--Variables Bancomer -->
 
-   // $(document).ready(function() {
     	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;
 	    var Ds_Merchant_Currency = 484;
 	    var Ds_Merchant_Order = genOrder();
@@ -19,8 +18,11 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
 		console.log(Ds_Merchant_Amount);
 		console.log(Ds_Merchant_ProductDescription);
 		console.log(Ds_Merchant_MerchantCode);
-		console.log(Ds_Merchant_MerchantSignature);	
+		console.log(Ds_Merchant_MerchantSignature);
 
+			
+
+    $(document).ready(function() {
 		 $("#continuaBancomer").click(function(){
 		 	console.log("ENTRE!");
             $.ajax({
@@ -41,7 +43,7 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
                 }
             })
 		 });
-	//});
+	});
     
 
 
