@@ -7,13 +7,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Evento Anual</title>
-
-	<link rel="stylesheet" href="css/form-validation.css">
+	<title>Conferencia Nacional 2016</title>
+    <script data-main="./scripts/main" src="./scripts/require.js"></script>
+	<link rel="stylesheet" href="./css/formulario.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 </head>
-
     <div class="main-content">
 
         <!-- You only need this form and the form-validation.css -->
@@ -21,65 +20,35 @@
         <form class="form-validation" method="post" action="#">
 
             <div class="form-title-row">
-                <h1>Form Validation</h1>
+                <h1 id="Concepto">Conferencia Nacional 2016</h1>
             </div>
 
             <div class="form-row form-input-name-row">
-
                 <label>
-                    <span>Nombre(s)</span>
+                    <span>Nombre(s):</span>
                     <input type="text" name="name">
                 </label>
-
-                <!--
-                    Add these three elements to every form row. They will be shown by the
-                    .form-valid-data and .form-invalid-data classes (see the JS for an example).
-                -->
-
-                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
-
-                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
-                <span class="form-invalid-data-info"></span>
-
             </div>
 
             <div class="form-row form-input-name-row">
-
                 <label>
-                    <span>Apellido</span>
+                    <span>Apellidos:</span>
                     <input type="text" name="name">
                 </label>
-
-                <!--
-                    Add these three elements to every form row. They will be shown by the
-                    .form-valid-data and .form-invalid-data classes (see the JS for an example).
-                -->
-
-                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
-
-                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
-                <span class="form-invalid-data-info"></span>
-
             </div>
 
             <div class="form-row form-input-email-row">
 
                 <label>
-                    <span>Email</span>
+                    <span>Email:</span>
                     <input type="email" name="email" value="email@example.com">
                 </label>
-
-                <span class="form-valid-data-sign"><i class="fa fa-check"></i></span>
-
-                <span class="form-invalid-data-sign"><i class="fa fa-close"></i></span>
-                <span class="form-invalid-data-info"></span>
-
             </div>
 
             <div class="form-row">
 
                 <label>
-                    <span>Elige iglesia</span>
+                    <span>Iglesia:</span>
                     <select name="dropdown">
                         <option value="">  </option>
             <option value="Otra Iglesia"> Otra Iglesia </option>
@@ -159,15 +128,21 @@
             <option value="Alcance Victoria, Zapopan, Jalisco"> Alcance Victoria, Zapopan, Jalisco </option>
                     </select>
                 </label>
-
+            </div>
+            <div>
+                <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
+            </div>
+            <div id="verificaDatos" class="form-row">
+                <button type="submit">Siguiente</button>
             </div>
 
-
-            <div class="form-row">
-
+             <div id="continuaPago" class="form-row">
                 <button type="submit">Continuar</button>
-
             </div>
+             <div id="regresaIngresa" class="form-row">
+                <button type="submit">Corregir datos</button>
+            </div>
+
 
         </form>
 

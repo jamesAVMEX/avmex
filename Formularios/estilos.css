@@ -7,15 +7,14 @@
 .framesin{
       
       display: inline-block;
-      height: 600px;
-      width: 550px;
+      height: 550px;
+      width: 800px;
        z-index: 2;
       float: center;
       left: 320px;
       border: 0;
       overflow: hidden;
-      /*opacity: .9;*/
-      background: #858585;
+      opacity: .9;
  }
 
 #form_izq {
