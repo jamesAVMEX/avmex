@@ -5,6 +5,11 @@ html{
 #cantidad{
     color:#fff;
 }
+
+#verificaDatos{
+    display: inline;
+}
+
 #continuaPago{
     display: none;
 }

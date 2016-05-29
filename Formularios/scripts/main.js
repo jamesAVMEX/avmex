@@ -23,7 +23,7 @@ require(['crypt', 'jquery'], function (sha1, $) {
 		console.log(Ds_Merchant_MerchantSignature);	
 
 		 $("#sendBancomer").click(function(){
-		 	console.log("ENTRE!");
+		 	/*console.log("ENTRE!");*/
             $.ajax({
                 type:"POST",
 				url: "https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge",
@@ -43,11 +43,6 @@ require(['crypt', 'jquery'], function (sha1, $) {
             })
 		 });
 
-		 $("#verificaDatos").click(function(){
-		 	console.log("ENTRE!");
-            
-            })
-		 });
 	});
     
 
