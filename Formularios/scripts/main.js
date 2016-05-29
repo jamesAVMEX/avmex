@@ -1,6 +1,8 @@
-require(['crypt', 'jquery'], function (sha1, $) {
+require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
+   //console.log(document);
+    <!--Variables Bancomer -->
 
-	$(document).ready(function(){
+   // $(document).ready(function() {
     	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;
 	    var Ds_Merchant_Currency = 484;
 	    var Ds_Merchant_Order = genOrder();
@@ -19,7 +21,8 @@ require(['crypt', 'jquery'], function (sha1, $) {
 		console.log(Ds_Merchant_MerchantCode);
 		console.log(Ds_Merchant_MerchantSignature);	
 
-		 $("#sendBancomer").click(function(){
+		 $("#continuaBancomer").click(function(){
+		 	console.log("ENTRE!");
             $.ajax({
                 type:"POST",
 				url: "https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge",
@@ -37,10 +40,11 @@ require(['crypt', 'jquery'], function (sha1, $) {
 					Ds_Merchant_MerchantSignature : Ds_Merchant_MerchantSignature
                 }
             })
-		 })
-	});
+		 });
+	//});
+    
 
-   
+
     function genOrder(){
       var noOrden ="";
       var opciones = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -52,5 +56,9 @@ require(['crypt', 'jquery'], function (sha1, $) {
       noOrden = primeros4+alfaNum;
       
       return noOrden;
-    }    
+    }
+
+
+
+    
 });
