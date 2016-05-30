@@ -40,7 +40,7 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
 					Ds_Merchant_UrlOK : Ds_Merchant_UrlOK,
 					Ds_Merchant_UrlKO : Ds_Merchant_UrlKO,
 					Ds_Merchant_MerchantSignature : Ds_Merchant_MerchantSignature
-                }
+                },
 		 		success: function(data){
 		 			data = $.parseJSON(data);
 		 			if(data.status == 'true'){
