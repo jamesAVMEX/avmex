@@ -1,15 +1,14 @@
-require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
-   //console.log(document);
+require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1) {
     <!--Variables Bancomer -->
 
-    	var Ds_Merchant_Amount = document.getElementById("totalPagar").innerHTML;
+    	var Ds_Merchant_Amount = 50000;
 	    var Ds_Merchant_Currency = 484;
 	    var Ds_Merchant_Order = genOrder();
-	    var Ds_Merchant_MerchantURL ="https://www.alcancevictoriamexico.org/registro.html";
+	    var Ds_Merchant_MerchantURL ="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html";
 	    var Ds_Merchant_TransactionType = 0;
 	    var Ds_Merchant_ProductDescription = document.getElementById("Concepto").innerHTML;
 	    var Ds_Merchant_MerchantCode = 4083194;
-	    var Ds_Merchant_Merchant_Terminal = 1;
+	    var Ds_Merchant_Terminal = 1;
 	    var Ds_Merchant_UrlOK = "https://www.alcancevictoriamexico.org/aprobado.html";
 	    var Ds_Merchant_UrlKO = "https://www.alcancevictoriamexico.org/denegado.html";
 	    
@@ -20,14 +19,21 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
 		console.log(Ds_Merchant_MerchantCode);
 		console.log(Ds_Merchant_MerchantSignature);
 
-			
+	
 
     $(document).ready(function() {
 		 $("#continuaBancomer").click(function(){
 		 	console.log("ENTRE!");
+            
+            formularioDatos.target = document.getElementById('framePortal');	
+            
             $.ajax({
                 type:"POST",
 				url: "https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge",
+                async: true,
+                crossDomain: true,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                cache:false,
                 data:{
                 	Ds_Merchant_Amount : Ds_Merchant_Amount,
 					Ds_Merchant_Currency : Ds_Merchant_Currency,
@@ -36,7 +42,7 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
 					Ds_Merchant_TransactionType: Ds_Merchant_TransactionType,
 					Ds_Merchant_ProductDescription : Ds_Merchant_ProductDescription,
 					Ds_Merchant_MerchantCode : Ds_Merchant_MerchantCode,
-					Ds_Merchant_Merchant_Terminal : Ds_Merchant_Merchant_Terminal,
+					Ds_Merchant_Terminal : Ds_Merchant_Terminal,
 					Ds_Merchant_UrlOK : Ds_Merchant_UrlOK,
 					Ds_Merchant_UrlKO : Ds_Merchant_UrlKO,
 					Ds_Merchant_MerchantSignature : Ds_Merchant_MerchantSignature
@@ -46,10 +52,9 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
 		 			if(data.status == 'true'){
 		 				console.log("envio");
 		 			}
-		 		}
-            })
+		 		},
+            });
 		 });
-
 	});
     
 
@@ -65,9 +70,5 @@ require(['crypt', './js/jquery-1.11.3.min.js'], function (sha1, $) {
       noOrden = primeros4+alfaNum;
       
       return noOrden;
-    }
-
-
-
-    
+    }    
 });
