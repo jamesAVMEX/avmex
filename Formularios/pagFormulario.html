@@ -3,12 +3,66 @@
 <head>
 <meta charset="utf-8">
 <title>Formulario Compra</title>
-<script data-main="./scripts/main" src="./scripts/require.js"></script>
+<script languaje=Javascript src="./scripts/sha1.js"></script>
 <link href="estilos.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./css/formulario.css">
+<script type="text/javascript">
+    function rdy(){
+        var Ds_Merchant_Amount = 50000;
+        var Ds_Merchant_MerchantCode = 4083194;
+        var Ds_Merchant_Currency = 484;
+        var Ds_Merchant_Order = genOrder();
+        var Ds_Merchant_ProductDescription = document.getElementById("Concepto").innerHTML;  
+        var Ds_Merchant_MerchantURL ="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html";
+        var Ds_Merchant_Terminal = 1;
+        var Ds_Merchant_TransactionType = 0;
+        var Ds_Merchant_MerchantSignature = hash(Ds_Merchant_Amount+Ds_Merchant_Order+Ds_Merchant_MerchantCode+Ds_Merchant_Currency+Ds_Merchant_TransactionType+"4lc0n3vct3wq1fh9zm6k");
+
+        var Ds_Merchant_UrlOK = "https://www.alcancevictoriamexico.org/aprobado.html";
+        var Ds_Merchant_UrlKO = "https://www.alcancevictoriamexico.org/denegado.html";
+
+        document.getElementById('Merchant_Amount').value = Ds_Merchant_Amount;
+        document.getElementById('Merchant_Currency').value = Ds_Merchant_Currency;
+        document.getElementById('Merchant_Order').value = Ds_Merchant_Order;
+        document.getElementById('Merchant_MerchantURL').value = Ds_Merchant_MerchantURL;
+        document.getElementById('Merchant_TransactionType').value = Ds_Merchant_TransactionType;
+        document.getElementById('Merchant_ProductDescription').value = Ds_Merchant_ProductDescription;
+        document.getElementById('Merchant_MerchantCode').value = Ds_Merchant_MerchantCode;
+        document.getElementById('Merchant_Terminal').value = Ds_Merchant_Terminal;
+        document.getElementById('Merchant_UrlOK').value = Ds_Merchant_UrlOK;
+        document.getElementById('Merchant_UrlKO').value = Ds_Merchant_UrlKO;
+        document.getElementById('Merchant_Signature').value = Ds_Merchant_MerchantSignature;
+
+        console.log(document.getElementById('Merchant_Amount').value +" AMOUNT");
+        console.log(document.getElementById('Merchant_MerchantCode').value +" CODE");
+        console.log(document.getElementById('Merchant_Currency').value +" currency");
+        console.log(document.getElementById('Merchant_Order').value +" ORDER");
+        console.log(document.getElementById('Merchant_ProductDescription').value +" DESCRIPTION");
+        console.log(document.getElementById('Merchant_MerchantURL').value +" URL");
+        console.log(document.getElementById('Merchant_Terminal').value +" TERMINAL");
+        console.log(document.getElementById('Merchant_TransactionType').value +" TYPE");
+        console.log(document.getElementById('Merchant_Signature').value +" SIGNATURE");
+
+        console.log(document.getElementById('Merchant_UrlOK').value +" OK");
+        console.log(document.getElementById('Merchant_UrlKO').value +" KO");
+    };
+
+    function genOrder(){
+        var noOrden ="";
+        var opciones = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var alfaNum = "";
+        var primeros4 = Math.floor((Math.random() * 9999)+1);
+        for(var i = 0; i < 8; i++){
+          alfaNum += opciones.charAt(Math.floor(Math.random() * opciones.length));
+        }
+        noOrden = primeros4+alfaNum;
+      return noOrden;
+    };    
+</script>
+
 </head>
 
-<body>
+<body onload="javascript:rdy()">
 <div id="todo">
   <div id="top_formulario">
     <div id="banner"><img src="Imagenes/top_form.png" width="800" height="88" alt=""/></div>
@@ -20,8 +74,20 @@
 
       <div class="main-content">
 
-        <form id="formularioDatos" class="form-validation" method="post" action="https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge" target="framePortal">
+        <form name=clasico  class=form-validation method=post action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge target="frame1">
 
+            <input type='hidden' id='Merchant_Amount' name='Ds_Merchant_Amount'/>
+            <input type='hidden' id='Merchant_Currency' name='Ds_Merchant_Currency'/>
+            <input type='hidden' id='Merchant_Order' name='Ds_Merchant_Order'/>
+            <input type='hidden' id='Merchant_MerchantURL' name='Ds_Merchant_MerchantURL'/>
+            <input type='hidden' id='Merchant_TransactionType' name='Ds_Merchant_TransactionType'/>
+            <input type='hidden' id='Merchant_ProductDescription' name='Ds_Merchant_ProductDescription'/>
+            <input type='hidden' id='Merchant_MerchantCode' name='Ds_Merchant_MerchantCode'/>
+            <input type='hidden' id='Merchant_Terminal' name='Ds_Merchant_Terminal'/>
+            <input type='hidden' id='Merchant_UrlOK' name='Ds_Merchant_UrlOK'/>
+            <input type='hidden' id='Merchant_UrlKO' name='Ds_Merchant_UrlKO'/>
+            <input type='hidden' id='Merchant_Signature' name='Ds_Merchant_Signature'/>
+            
             <div class="form-title-row">
                 <h1 id="Concepto">Conferencia Nacional 2016</h1>
             </div>
@@ -30,7 +96,7 @@
                 <label>
                     <span>Nombre(s):</span>
                     <p id="desplegaNombre"></p>
-                    <input type="text" id="nombres" name="nombres">
+                    <input type="text" id="nombres" name="nombres" required>
                 </label>
             </div>
 
@@ -38,7 +104,7 @@
                 <label>
                     <span>Apellidos:</span>
                     <p id="desplegaApellidos"></p>
-                    <input type="text" id="apellidos" name="apellidos">
+                    <input type="text" id="apellidos" name="apellidos" required>
                 </label>
             </div>
 
@@ -46,28 +112,18 @@
                 <label>
                     <span>Email:</span>
                     <p id="desplegaEmail"></p>
-                    <input id="email" name="email" value="email@example.com">
+                    <input id="email" name="email" value="email@example.com" required>
                 </label>
             </div>
             
-            <input type='hidden' id='Merchant_Amount' name='amount' value=' '/>
-            <input type='hidden' id='Merchant_Currency' name='currency' value=' '/>
-            <input type='hidden' id='Merchant_Order' name='order' value=' '/>
-            <input type='hidden' id='Merchant_MerchantURL' name='merchantURL' value=' '/>
-            <input type='hidden' id='Merchant_TransactionType' name='TransactionType' value=' '/>
-            <input type='hidden' id='Merchant_ProductDescription' name='description' value=' '/>
-            <input type='hidden' id='Merchant_MerchantCode' name='code' value=' '/>
-            <input type='hidden' id='Merchant_Terminal' name='terminal' value=' '/>
-            <input type='hidden' id='Merchant_UrlOK' name='ok' value=' '/>
-            <input type='hidden' id='Merchant_UrlKO' name='ko' value=' '/>
-            <input type='hidden' id='Merchant_Signature' name='ko' value=' '/>
+
 
             
             <div class="form-row">
                 <label>
                     <span>Teléfono:</span>
                     <p id="desplegaTelefono"></p>
-                    <input id="telefono" name="telefono">
+                    <input id="telefono" name="telefono" required>
                 </label>
             </div>
 
@@ -76,7 +132,7 @@
                 <label>
                     <span>Iglesia:</span>
                     <p id="desplegaIglesia"></p>
-                    <select id="iglesias" name="dropdown">
+                    <select id="iglesias" name="dropdown" required>
                         <option value="">  </option>
                         <option value="Otra Iglesia"> Otra Iglesia </option>
                         <option value="Alcance Victoria, Acapulco, Guerrero"> Alcance Victoria, Acapulco, Guerrero </option>
@@ -168,7 +224,7 @@
             </div>
             
             <div id="continuaPago">
-                <button id="continuaBancomer" onclick="mySubmit(); return false;" type="submit"">Continuar</button>
+                <button id="continuaBancomer" onClick="javascript:rdy();" type="submit">Continuar</button>
             </div>
         </form>
     </div>
@@ -176,11 +232,20 @@
 
 
   </div>
-    <iframe id="framePortal" width="200" height="200" scrolling="no"></iframe>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+    <iframe name="frame1" width="620" height="500" scrolling="no"></iframe>
 
-  <br></br>
-  <br></br>
-  <br></br>
 
   <div id="pie">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
     <p id="u1690-" style="color: #000133">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
@@ -250,22 +315,6 @@
               document.getElementById('regresaIngresa').style.display = "none";
           }
 
-        function mySubmit(){
-            console.log(document.getElementById('Merchant_Amount').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_Currency').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_Order').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_MerchantURL').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_TransactionType').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_ProductDescription').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_MerchantCode').value +"YA DEL FORM");
-            console.log(document.getElementById('Merchant_Terminal').value +"YA DEL FORM");
-            console.log(document.getElementById('Merchant_UrlOK').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_UrlKO').value +" YA DEL FORM");
-            console.log(document.getElementById('Merchant_Signature').value +"YA DEL FORM");
-
-            console.log("envie");
-            document.getElementById('formularioDatos').submit();
-        }
   </script>
 </body>
 </html>
