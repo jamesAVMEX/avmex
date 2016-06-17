@@ -1,11 +1,10 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!DOCTYPE HTML>
 
 <HTML><HEAD><TITLE>Compra de tickets</TITLE>
 <META content="text/html; charset=windows-1252" http-equiv=Content-Type>
 <SCRIPT language=JavaScript src="./scripts/sha1.js"></SCRIPT>
 <link href="estilos.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./css/formulario.css">
-
 <script language=JavaScript>
 function fecha(){
     today = new Date();
@@ -79,10 +78,10 @@ function submitir(conTarjeta)
 
     <div id="formulario">
          <div class="main-content">
-            <div class="form-title-row">
-                <h1 id="Concepto">Conferencia Nacional 2016</h1>
-            </div>
-            <form action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge method=post name=clasico target=frame1>
+            <form action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge method=post class="form-validation" name=clasico target=_self>
+                <div class="form-title-row">
+                    <h1 id="Concepto">Conferencia Nacional 2016</h1>
+                </div>
                 <INPUT name=Ds_Merchant_Amount type="hidden"/>
                 <INPUT name=Ds_Merchant_Currency type="hidden"/>
                 <INPUT name=Ds_Merchant_MerchantCode type="hidden"/>
@@ -94,6 +93,7 @@ function submitir(conTarjeta)
                 <INPUT name=Ds_Merchant_MerchantName type="hidden" value="Alcance Victoria" />
                 <INPUT name=Ds_Merchant_ProductDescription type="hidden"/>
                 <INPUT name=Ds_Merchant_MerchantURL type="hidden" value="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html" />
+
 
 
                 <div class="form-row">
@@ -220,22 +220,30 @@ function submitir(conTarjeta)
                     <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
                 </div>
                 <div id="verificaDatos">
-                    <button type="submit" onclick="verificandoDatos(); return false;">Siguiente</button>
+                    <!--<button type="submit" onclick="verificandoDatos();">Siguiente</button>-->
+                    <button type="submit" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">Siguiente</button>
                 </div>
             
                 <div id="regresaIngresa">
                     <button type="submit" onclick="regresaLlenado(); return false;" >Corregir datos</button>
                 </div>
+
+                <br>
                 
-                <INPUT type="button" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">
             </form>
 
         </div>
     </div>
    
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
 
-  <iframe name="frame1" width="620" height="500" scrolling="yes" marginwidth="0" marginheight="0">
-  </iframe>
+  <!--<iframe name="frame1" width="620" height="500" scrolling="yes" marginwidth="0" marginheight="0">
+  </iframe>-->
+
   <div id="pie">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
     <p id="u1690-" style="color: #000133">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
     Precio despues del 25 de Julio sera Normal ($ 600.00 mn)<br>
@@ -248,9 +256,6 @@ function submitir(conTarjeta)
 </div>
 
   <script>
-          /*var divSiguiente = document.getElementById('verificaDatos');
-          var divPago = document.getElementById('continuaPago');
-          var divAtras = document.getElementById('regresaIngresa');*/
           function verificandoDatos(){
               var nombres = document.getElementById('nombres').value;
               var apellidos = document.getElementById('apellidos').value;
