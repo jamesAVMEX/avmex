@@ -1,0 +1,198 @@
+<!doctype html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario Compra</title>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<script languaje=Javascript src="./scripts/sha1.js"></script>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/formulario.css">
+<script type="text/javascript">
+
+function carga()
+{
+  document.clasico.Ds_Merchant_Order.value = genOrder();
+  console.log(document.clasico.Ds_Merchant_Order.value);
+}
+
+
+
+function submitir(conTarjeta)
+{
+
+    document.value= hash(document.clasico.Ds_Merchant_Amount.value + document.clasico.Ds_Merchant_Order.value + document.clasico.Ds_Merchant_MerchantCode.value + document.clasico.Ds_Merchant_Currency.value + document.clasico.Ds_Merchant_TransactionType.value+"4lc0n3vct3wq1fh9zm6k");
+
+    document.getElementById("Ds_Merchant_ProductDescription").value = document.getElementById("Concepto").innerHTML;
+
+
+    console.log(document.clasico.Ds_Merchant_Currency.value);
+    console.log(document.clasico.Ds_Merchant_Amount.value);
+    console.log(document.clasico.Ds_Merchant_MerchantCode.value);
+    console.log(document.clasico.Ds_Merchant_Terminal.value);
+    console.log(document.clasico.Ds_Merchant_TransactionType.value);
+    console.log(document.clasico.Ds_Merchant_MerchantSignature.value);
+    console.log(document.clasico.Ds_Merchant_ProductDescription.value);
+    console.log(document.clasico.Ds_Merchant_MerchantURL.value);
+
+
+    document.clasico.action="https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge";
+    document.clasico.submit();
+}
+    function genOrder(){
+        var noOrden ="";
+        var opciones = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var alfaNum = "";
+        var primeros4 = Math.floor((Math.random() * 9999)+1);
+        for(var i = 0; i < 8; i++){
+          alfaNum += opciones.charAt(Math.floor(Math.random() * opciones.length));
+        }
+        noOrden = primeros4+alfaNum;
+      return noOrden;
+    };    
+</script>
+
+</head>
+
+<body onLoad="javascript:carga()">
+<div id="todo">
+  <div id="top_formulario">
+    <div id="banner"><img src="Imagenes/top_form.png" width="800" height="88" alt=""/></div>
+    <div id="separacion"><img src="Imagenes/sepa_form.png" width="800" height="35" alt=""/></div>
+  </div>
+  <div id="formulario">
+      <div class="main-content">
+
+            <h1 id="Concepto">Conferencia Nacional 2016</h1>
+            <form action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge method=post name=clasico target=frame1>
+
+               <INPUT name=Ds_Merchant_Amount type="hidden" value=500000/>
+               <INPUT name=Ds_Merchant_Currency type="hidden" value=484/>
+               <INPUT name=Ds_Merchant_Order id="Ds_Merchant_Order" type='hidden'  />
+               <INPUT name=Ds_Merchant_ProductDescription id="Ds_Merchant_ProductDescription" type='hidden'/>
+               <INPUT name=Ds_Merchant_MerchantCode type="hidden" value="4083194"/>
+               <INPUT name=Ds_Merchant_MerchantURL type="hidden" value="www.alcancevictoriamexico.org/Formularios/pagFormulario.html"/>
+               <INPUT name=Ds_Merchant_MerchantSignature type="hidden"/>
+               <INPUT name=Ds_Merchant_Terminal type="hidden" value=1/>
+               <INPUT name="Ds_Merchant_TransactionType" type="hidden" value=0 />
+               <tr>
+                <td>Tipo de operación</td>
+                <td>
+                  <SELECT name="Ds_Merchant_TransactionType">
+                    <OPTION value="0" SELECTED>Pago normal</OPTION>
+                  </SELECT>
+                </td>
+               </tr>
+               <tr>
+                
+                <td>UrlOK</td>
+                <td><INPUT name=Ds_Merchant_UrlOK type="text" size=40 maxlength=250 value=""/></td>
+               </tr>
+               <tr>
+                <td>UrlKO</td>
+                <td><INPUT name=Ds_Merchant_UrlKO type="text" size=40 maxlength=250 value=""/></td>
+               </tr>
+               <tr>
+                <td>Url de Notific</td>
+                <td><INPUT name=Ds_Merchant_MerchantURL type="text" value="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html" size=50/></td>
+                </tr>
+               </tbody>
+               </table>
+       </form>
+            
+            
+             <INPUT type="button" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">
+
+        </form>
+    </div>
+  
+
+
+  </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+    <iframe name="frame1" width="620" height="500" scrolling="yes" marginwidth="0" marginheight="0">
+  </iframe>
+
+
+  <div id="pie">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
+    <p id="u1690-" style="color: #000133">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
+    Precio despues del 25 de Julio sera Normal ($ 600.00 mn)<br>
+    Los precios son en Pesos Méxicanos,El registro no es tranferible. <br>
+    El pago no es rembolsable por cancelación.<br>
+    Mas Información en: info@alcancevictoriamexico.org<br>
+    Alcance Victoria de México, A.C.Calle 10, Z.C., Tijuana, B.C. Tel: 01 664 638.2308    </p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+  <script>
+          /*var divSiguiente = document.getElementById('verificaDatos');
+          var divPago = document.getElementById('continuaPago');
+          var divAtras = document.getElementById('regresaIngresa');*/
+          function verificandoDatos(){
+              var nombres = document.getElementById('nombres').value;
+              var apellidos = document.getElementById('apellidos').value;
+              var email = document.getElementById('email').value;
+              var telefono = document.getElementById('telefono').value;
+              var iglesias = document.getElementById('iglesias');
+              var iglesiaSeleccionada = iglesias.options[iglesias.selectedIndex].value;
+
+              document.getElementById('desplegaNombre').style.display = "inline-block";
+              document.getElementById('desplegaNombre').style.color = "#ffffff";
+              document.getElementById('desplegaNombre').innerHTML = nombres;
+
+              document.getElementById('desplegaApellidos').style.display = "inline-block";
+              document.getElementById('desplegaApellidos').style.color = "#ffffff";
+              document.getElementById('desplegaApellidos').innerHTML = apellidos;
+
+              document.getElementById('desplegaEmail').style.display = "inline-block";
+              document.getElementById('desplegaEmail').style.color = "#ffffff";
+              document.getElementById('desplegaEmail').innerHTML = email;
+
+              document.getElementById('desplegaTelefono').style.display = "inline-block";
+              document.getElementById('desplegaTelefono').style.color = "#ffffff";
+              document.getElementById('desplegaTelefono').innerHTML = telefono;;
+
+              document.getElementById('desplegaIglesia').style.display = "inline-block";
+              document.getElementById('desplegaIglesia').style.color = "#ffffff";
+              document.getElementById('desplegaIglesia').innerHTML = iglesiaSeleccionada;
+
+              document.getElementById('nombres').style.display = "none";
+              document.getElementById('apellidos').style.display = "none";
+              document.getElementById('email').style.display = "none";
+              document.getElementById('telefono').style.display = "none";
+              document.getElementById('iglesias').style.display = "none";
+              document.getElementById('continuaPago').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "inline-block";
+              document.getElementById('verificaDatos').style.display = "none";
+          }
+
+          function regresaLlenado(){
+              document.getElementById('desplegaNombre').style.display = "none";
+              document.getElementById('desplegaApellidos').style.display = "none";
+              document.getElementById('desplegaEmail').style.display = "none";
+              document.getElementById('desplegaTelefono').style.display = "none"
+              document.getElementById('desplegaIglesia').style.display = "none";
+
+              document.getElementById('nombres').style.display = "inline-block";
+              document.getElementById('apellidos').style.display = "inline-block";
+              document.getElementById('email').style.display = "inline-block";
+              document.getElementById('telefono').style.display = "inline-block";
+              document.getElementById('iglesias').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "none";
+          }
+
+  </script>
+</body>
+</html>
+
