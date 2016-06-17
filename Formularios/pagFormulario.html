@@ -1,8 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML><HEAD><TITLE>Comercio Electronico</TITLE>
+<HTML><HEAD><TITLE>Compra de tickets</TITLE>
 <META content="text/html; charset=windows-1252" http-equiv=Content-Type>
 <SCRIPT language=JavaScript src="./scripts/sha1.js"></SCRIPT>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/formulario.css">
 
 <script language=JavaScript>
 function fecha(){
@@ -69,7 +71,7 @@ function submitir(conTarjeta)
 
 <META content="MSHTML 5.00.2314.1000" name=GENERATOR></HEAD>
 <BODY onLoad="javascript:carga()">
-
+<div id="todo">
     <div id="top_formulario">
         <div id="banner"><img src="Imagenes/top_form.png" width="800" height="88" alt=""/></div>
         <div id="separacion"><img src="Imagenes/sepa_form.png" width="800" height="35" alt=""/></div>
@@ -77,9 +79,9 @@ function submitir(conTarjeta)
 
     <div id="formulario">
          <div class="main-content">
-
-            <h1 id="Concepto">Conferencia Nacional 2016</h1>
-
+            <div class="form-title-row">
+                <h1 id="Concepto">Conferencia Nacional 2016</h1>
+            </div>
             <form action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge method=post name=clasico target=frame1>
                 <INPUT name=Ds_Merchant_Amount type="hidden"/>
                 <INPUT name=Ds_Merchant_Currency type="hidden"/>
@@ -92,7 +94,139 @@ function submitir(conTarjeta)
                 <INPUT name=Ds_Merchant_MerchantName type="hidden" value="Alcance Victoria" />
                 <INPUT name=Ds_Merchant_ProductDescription type="hidden"/>
                 <INPUT name=Ds_Merchant_MerchantURL type="hidden" value="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html" />
-          
+
+
+                <div class="form-row">
+                    <label>
+                        <span>Nombre(s):</span>
+                        <p id="desplegaNombre"></p>
+                        <input type="text" id="nombres" name="nombres" required>
+                    </label>
+                </div>
+
+                <div class="form-row form-input-name-row">
+                    <label>
+                        <span>Apellidos:</span>
+                        <p id="desplegaApellidos"></p>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                    </label>
+                </div>
+
+                <div class="form-row form-input-email-row">
+                    <label>
+                        <span>Email:</span>
+                        <p id="desplegaEmail"></p>
+                        <input id="email" name="email" value="email@example.com" required>
+                    </label>
+                </div>
+                
+
+
+                
+                <div class="form-row">
+                    <label>
+                        <span>Teléfono:</span>
+                        <p id="desplegaTelefono"></p>
+                        <input id="telefono" name="telefono" required>
+                    </label>
+                </div>
+
+                <div class="form-row">
+                    <label>
+                        <span>Iglesia:</span>
+                        <p id="desplegaIglesia"></p>
+                        <select id="iglesias" name="dropdown" required>
+                            <option value="">  </option>
+                            <option value="Otra Iglesia"> Otra Iglesia </option>
+                            <option value="Alcance Victoria, Acapulco, Guerrero"> Alcance Victoria, Acapulco, Guerrero </option>
+                            <option value="Alcance Victoria, Angangueo, Michoacan"> Alcance Victoria, Angangueo, Michoacan </option>
+                            <option value="Alcance Victoria, Campeche, Campeche"> Alcance Victoria, Campeche, Campeche </option>
+                            <option value="Alcance Victoria, Cancun (Norte), Quintana Roo"> Alcance Victoria, Cancun (Norte), Quintana Roo </option>
+                            <option value="Alcance Victoria, Cd. Victoria, Tamaulipas"> Alcance Victoria, Cd. Victoria, Tamaulipas </option>
+                            <option value="Alcance Victoria, Chetumal, Quintana Roo"> Alcance Victoria, Chetumal, Quintana Roo </option>
+                            <option value="Alcance Victoria, Chihuahua, Chihuahua"> Alcance Victoria, Chihuahua, Chihuahua </option>
+                            <option value="Alcance Victoria, Coatzacoalcos, Veracruz"> Alcance Victoria, Coatzacoalcos, Veracruz </option>
+                            <option value="Alcance Victoria, Cozumel, Quintana Roo"> Alcance Victoria, Cozumel, Quintana Roo </option>
+                            <option value="Alcance Victoria, Cuautla, Morelos"> Alcance Victoria, Cuautla, Morelos </option>
+                            <option value="Alcance Victoria, Cuernavaca (Centro), Morelos"> Alcance Victoria, Cuernavaca (Centro), Morelos </option>
+                            <option value="Alcance Victoria, Culiacan, Sinaloa"> Alcance Victoria, Culiacan, Sinaloa </option>
+                            <option value="Alcance Victoria, Emiliano Zapata, Morelos"> Alcance Victoria, Emiliano Zapata, Morelos </option>
+                            <option value="Alcance Victoria, Ensenada, B.C."> Alcance Victoria, Ensenada, B.C. </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Aragon)"> Alcance Victoria, Estado de Mexico (Aragon) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Chimalhuacan)"> Alcance Victoria, Estado de Mexico (Chimalhuacan) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Las Palomas)"> Alcance Victoria, Estado de Mexico (Las Palomas) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Lazaro Cardenas)"> Alcance Victoria, Estado de Mexico (Lazaro Cardenas) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Naucalpan)"> Alcance Victoria, Estado de Mexico (Naucalpan) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Nezahualcoyotl Norte)"> Alcance Victoria, Estado de Mexico (Nezahualcoyotl Norte) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Nezahualcoyotl)"> Alcance Victoria, Estado de Mexico (Nezahualcoyotl) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (San Agustin)"> Alcance Victoria, Estado de Mexico (San Agustin) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Toluca)"> Alcance Victoria, Estado de Mexico (Toluca) </option>
+                            <option value="Alcance Victoria, Estado de Mexico (Valle de Chalco)"> Alcance Victoria, Estado de Mexico (Valle de Chalco) </option>
+                            <option value="Alcance Victoria, Guadalajara, Jalisco"> Alcance Victoria, Guadalajara, Jalisco </option>
+                            <option value="Alcance Victoria, Hermosillo (Norte) Sonora"> Alcance Victoria, Hermosillo (Norte) Sonora </option>
+                            <option value="Alcance Victoria, Hermosillo, Sonora"> Alcance Victoria, Hermosillo, Sonora </option>
+                            <option value="Alcance Victoria, Irapuato, Guanajuato"> Alcance Victoria, Irapuato, Guanajuato </option>
+                            <option value="Alcance Victoria, Jerez, Zacatecas"> Alcance Victoria, Jerez, Zacatecas </option>
+                            <option value="Alcance Victoria, Jiutepec, Morelos"> Alcance Victoria, Jiutepec, Morelos </option>
+                            <option value="Alcance Victoria, Juarez (Norte), Chihuahua"> Alcance Victoria, Juarez (Norte), Chihuahua </option>
+                            <option value="Alcance Victoria, Leon, Guanajuato"> Alcance Victoria, Leon, Guanajuato </option>
+                            <option value="Alcance Victoria, Los Mochis, Sinaloa"> Alcance Victoria, Los Mochis, Sinaloa </option>
+                            <option value="Alcance Victoria, Mazatlan, Sinaloa"> Alcance Victoria, Mazatlan, Sinaloa </option>
+                            <option value="Alcance Victoria, Merida (Poniente), Yucatan"> Alcance Victoria, Merida (Poniente), Yucatan </option>
+                            <option value="Alcance Victoria, Merida, Yucatan"> Alcance Victoria, Merida, Yucatan </option>
+                            <option value="Alcance Victoria, Merida, Yucatan"> Alcance Victoria, Merida, Yucatan </option>
+                            <option value="Alcance Victoria, Mexicali (Centro)"> Alcance Victoria, Mexicali (Centro) </option>
+                            <option value="Alcance Victoria, Mexicali (Este)"> Alcance Victoria, Mexicali (Este) </option>
+                            <option value="Alcance Victoria, Mexicali (Hidalgo)"> Alcance Victoria, Mexicali (Hidalgo) </option>
+                            <option value="Alcance Victoria, Mexico D.F. (Balbuena)"> Alcance Victoria, Mexico D.F. (Balbuena) </option>
+                            <option value="Alcance Victoria, Mexico D.F. (Iztacalco)"> Alcance Victoria, Mexico D.F. (Iztacalco) </option>
+                            <option value="Alcance Victoria, Mexico D.F. (Iztapalapa)"> Alcance Victoria, Mexico D.F. (Iztapalapa) </option>
+                            <option value="Alcance Victoria, Monterrey (Guadalupe) Nuevo Leon"> Alcance Victoria, Monterrey (Guadalupe) Nuevo Leon </option>
+                            <option value="Alcance Victoria, Monterrey, Nuevo Leon"> Alcance Victoria, Monterrey, Nuevo Leon </option>
+                            <option value="Alcance Victoria, Morelia, Michoacan"> Alcance Victoria, Morelia, Michoacan </option>
+                            <option value="Alcance Victoria, Nogales, Sonora"> Alcance Victoria, Nogales, Sonora </option>
+                            <option value="Alcance Victoria, Nuevo Laredo, Tamaulipas"> Alcance Victoria, Nuevo Laredo, Tamaulipas </option>
+                            <option value="Alcance Victoria, Oaxaca, Oaxaca"> Alcance Victoria, Oaxaca, Oaxaca </option>
+                            <option value="Alcance Victoria, Obregon, Sonora"> Alcance Victoria, Obregon, Sonora </option>
+                            <option value="Alcance Victoria, Playa Del Carmen, Quintana Roo"> Alcance Victoria, Playa Del Carmen, Quintana Roo </option>
+                            <option value="Alcance Victoria, Puebla, Puebla"> Alcance Victoria, Puebla, Puebla </option>
+                            <option value="Alcance Victoria, Queretaro, Queretaro"> Alcance Victoria, Queretaro, Queretaro </option>
+                            <option value="Alcance Victoria, Rosarito"> Alcance Victoria, Rosarito </option>
+                            <option value="Alcance Victoria, San Luis Potosi, S.L.P."> Alcance Victoria, San Luis Potosi, S.L.P. </option>
+                            <option value="Alcance Victoria, San Luis Rio Colorado, Sonora"> Alcance Victoria, San Luis Rio Colorado, Sonora </option>
+                            <option value="Alcance Victoria, San Pablo Xochimehuacan, Puebla"> Alcance Victoria, San Pablo Xochimehuacan, Puebla </option>
+                            <option value="Alcance Victoria, Tecate, B.C."> Alcance Victoria, Tecate, B.C. </option>
+                            <option value="Alcance Victoria, Tehuacan, Puebla"> Alcance Victoria, Tehuacan, Puebla </option>
+                            <option value="Alcance Victoria, Tepic, Nayarit"> Alcance Victoria, Tepic, Nayarit </option>
+                            <option value="Alcance Victoria, Tijuana (Centro) B.C."> Alcance Victoria, Tijuana (Centro) B.C. </option>
+                            <option value="Alcance Victoria, Tijuana (Francisco Villa) B.C."> Alcance Victoria, Tijuana (Francisco Villa) B.C. </option>
+                            <option value="Alcance Victoria, Tijuana (Norte) B.C."> Alcance Victoria, Tijuana (Norte) B.C. </option>
+                            <option value="Alcance Victoria, Tijuana Libertad B.C. (English)"> Alcance Victoria, Tijuana Libertad B.C. (English) </option>
+                            <option value="Alcance Victoria, Tlaxcala (Sur), Tlaxcala"> Alcance Victoria, Tlaxcala (Sur), Tlaxcala </option>
+                            <option value="Alcance Victoria, Tlaxcala, Tlaxcala"> Alcance Victoria, Tlaxcala, Tlaxcala </option>
+                            <option value="Alcance Victoria, Torreon, Coahuila"> Alcance Victoria, Torreon, Coahuila </option>
+                            <option value="Alcance Victoria, Tulum, Quintana Roo"> Alcance Victoria, Tulum, Quintana Roo </option>
+                            <option value="Alcance Victoria, Uman, Yucatan"> Alcance Victoria, Uman, Yucatan </option>
+                            <option value="Alcance Victoria, Valladolid, Yucatan"> Alcance Victoria, Valladolid, Yucatan </option>
+                            <option value="Alcance Victoria, Villahermosa, Tabasco"> Alcance Victoria, Villahermosa, Tabasco </option>
+                            <option value="Alcance Victoria, Zacatecas, Zacatecas"> Alcance Victoria, Zacatecas, Zacatecas </option>
+                            <option value="Alcance Victoria, Zamora, Michoacan"> Alcance Victoria, Zamora, Michoacan </option>
+                            <option value="Alcance Victoria, Zapopan, Jalisco"> Alcance Victoria, Zapopan, Jalisco </option>
+                        </select>
+                    </label>
+                </div>
+
+                <div>
+                    <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
+                </div>
+                <div id="verificaDatos">
+                    <button type="submit" onclick="verificandoDatos(); return false;">Siguiente</button>
+                </div>
+            
+                <div id="regresaIngresa">
+                    <button type="submit" onclick="regresaLlenado(); return false;" >Corregir datos</button>
+                </div>
+                
                 <INPUT type="button" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">
             </form>
 
