@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario Compra</title>
+<script languaje=Javascript src="./scripts/sha1.js"></script>
+<link href="estilos.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./css/formulario.css">
+<script type="text/javascript">
+    function rdy(){
+        var Ds_Merchant_Amount = 50000;
+        var Ds_Merchant_MerchantCode = 4083194;
+        var Ds_Merchant_Currency = 484;
+        var Ds_Merchant_Order = genOrder();
+        var Ds_Merchant_ProductDescription = document.getElementById("Concepto").innerHTML;  
+        var Ds_Merchant_MerchantURL ="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html";
+        var Ds_Merchant_Terminal = 1;
+        var Ds_Merchant_TransactionType = 0;
+        var Ds_Merchant_MerchantSignature = hash(Ds_Merchant_Amount+Ds_Merchant_Order+Ds_Merchant_MerchantCode+Ds_Merchant_Currency+Ds_Merchant_TransactionType+"4lc0n3vct3wq1fh9zm6k");
+
+        var Ds_Merchant_UrlOK = "https://www.alcancevictoriamexico.org/aprobado.html";
+        var Ds_Merchant_UrlKO = "https://www.alcancevictoriamexico.org/denegado.html";
+
+        document.getElementById('Merchant_Amount').value = Ds_Merchant_Amount;
+        document.getElementById('Merchant_Currency').value = Ds_Merchant_Currency;
+        document.getElementById('Merchant_Order').value = Ds_Merchant_Order;
+        document.getElementById('Merchant_MerchantURL').value = Ds_Merchant_MerchantURL;
+        document.getElementById('Merchant_TransactionType').value = Ds_Merchant_TransactionType;
+        document.getElementById('Merchant_ProductDescription').value = Ds_Merchant_ProductDescription;
+        document.getElementById('Merchant_MerchantCode').value = Ds_Merchant_MerchantCode;
+        document.getElementById('Merchant_Terminal').value = Ds_Merchant_Terminal;
+        document.getElementById('Merchant_UrlOK').value = Ds_Merchant_UrlOK;
+        document.getElementById('Merchant_UrlKO').value = Ds_Merchant_UrlKO;
+        document.getElementById('Merchant_Signature').value = Ds_Merchant_MerchantSignature;
+
+        console.log(document.getElementById('Merchant_Amount').value +" AMOUNT");
+        console.log(document.getElementById('Merchant_MerchantCode').value +" CODE");
+        console.log(document.getElementById('Merchant_Currency').value +" currency");
+        console.log(document.getElementById('Merchant_Order').value +" ORDER");
+        console.log(document.getElementById('Merchant_ProductDescription').value +" DESCRIPTION");
+        console.log(document.getElementById('Merchant_MerchantURL').value +" URL");
+        console.log(document.getElementById('Merchant_Terminal').value +" TERMINAL");
+        console.log(document.getElementById('Merchant_TransactionType').value +" TYPE");
+        console.log(document.getElementById('Merchant_Signature').value +" SIGNATURE");
+
+        console.log(document.getElementById('Merchant_UrlOK').value +" OK");
+        console.log(document.getElementById('Merchant_UrlKO').value +" KO");
+    };
+
+    function genOrder(){
+        var noOrden ="";
+        var opciones = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        var alfaNum = "";
+        var primeros4 = Math.floor((Math.random() * 9999)+1);
+        for(var i = 0; i < 8; i++){
+          alfaNum += opciones.charAt(Math.floor(Math.random() * opciones.length));
+        }
+        noOrden = primeros4+alfaNum;
+      return noOrden;
+    };    
+</script>
+
+</head>
+
+<body onload="javascript:rdy()">
+<div id="todo">
+  <div id="top_formulario">
+    <div id="banner"><img src="Imagenes/top_form.png" width="800" height="88" alt=""/></div>
+    <div id="separacion"><img src="Imagenes/sepa_form.png" width="800" height="35" alt=""/></div>
+  </div>
+  <div id="formulario">
+
+
+
+      <div class="main-content">
+
+        <form name=clasico  class=form-validation method=post action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge target="frame1">
+
+            <input type='hidden' id='Merchant_Amount' name='Ds_Merchant_Amount'/>
+            <input type='hidden' id='Merchant_Currency' name='Ds_Merchant_Currency'/>
+            <input type='hidden' id='Merchant_Order' name='Ds_Merchant_Order'/>
+            <input type='hidden' id='Merchant_MerchantURL' name='Ds_Merchant_MerchantURL'/>
+            <input type='hidden' id='Merchant_TransactionType' name='Ds_Merchant_TransactionType'/>
+            <input type='hidden' id='Merchant_ProductDescription' name='Ds_Merchant_ProductDescription'/>
+            <input type='hidden' id='Merchant_MerchantCode' name='Ds_Merchant_MerchantCode'/>
+            <input type='hidden' id='Merchant_Terminal' name='Ds_Merchant_Terminal'/>
+            <input type='hidden' id='Merchant_UrlOK' name='Ds_Merchant_UrlOK'/>
+            <input type='hidden' id='Merchant_UrlKO' name='Ds_Merchant_UrlKO'/>
+            <input type='hidden' id='Merchant_Signature' name='Ds_Merchant_Signature'/>
+            
+            <div class="form-title-row">
+                <h1 id="Concepto">Conferencia Nacional 2016</h1>
+            </div>
+
+            <div class="form-row">
+                <label>
+                    <span>Nombre(s):</span>
+                    <p id="desplegaNombre"></p>
+                    <input type="text" id="nombres" name="nombres" required>
+                </label>
+            </div>
+
+            <div class="form-row form-input-name-row">
+                <label>
+                    <span>Apellidos:</span>
+                    <p id="desplegaApellidos"></p>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </label>
+            </div>
+
+            <div class="form-row form-input-email-row">
+                <label>
+                    <span>Email:</span>
+                    <p id="desplegaEmail"></p>
+                    <input id="email" name="email" value="email@example.com" required>
+                </label>
+            </div>
+            
+
+
+            
+            <div class="form-row">
+                <label>
+                    <span>Teléfono:</span>
+                    <p id="desplegaTelefono"></p>
+                    <input id="telefono" name="telefono" required>
+                </label>
+            </div>
+
+            <div class="form-row">
+
+                <label>
+                    <span>Iglesia:</span>
+                    <p id="desplegaIglesia"></p>
+                    <select id="iglesias" name="dropdown" required>
+                        <option value="">  </option>
+                        <option value="Otra Iglesia"> Otra Iglesia </option>
+                        <option value="Alcance Victoria, Acapulco, Guerrero"> Alcance Victoria, Acapulco, Guerrero </option>
+                        <option value="Alcance Victoria, Angangueo, Michoacan"> Alcance Victoria, Angangueo, Michoacan </option>
+                        <option value="Alcance Victoria, Campeche, Campeche"> Alcance Victoria, Campeche, Campeche </option>
+                        <option value="Alcance Victoria, Cancun (Norte), Quintana Roo"> Alcance Victoria, Cancun (Norte), Quintana Roo </option>
+                        <option value="Alcance Victoria, Cd. Victoria, Tamaulipas"> Alcance Victoria, Cd. Victoria, Tamaulipas </option>
+                        <option value="Alcance Victoria, Chetumal, Quintana Roo"> Alcance Victoria, Chetumal, Quintana Roo </option>
+                        <option value="Alcance Victoria, Chihuahua, Chihuahua"> Alcance Victoria, Chihuahua, Chihuahua </option>
+                        <option value="Alcance Victoria, Coatzacoalcos, Veracruz"> Alcance Victoria, Coatzacoalcos, Veracruz </option>
+                        <option value="Alcance Victoria, Cozumel, Quintana Roo"> Alcance Victoria, Cozumel, Quintana Roo </option>
+                        <option value="Alcance Victoria, Cuautla, Morelos"> Alcance Victoria, Cuautla, Morelos </option>
+                        <option value="Alcance Victoria, Cuernavaca (Centro), Morelos"> Alcance Victoria, Cuernavaca (Centro), Morelos </option>
+                        <option value="Alcance Victoria, Culiacan, Sinaloa"> Alcance Victoria, Culiacan, Sinaloa </option>
+                        <option value="Alcance Victoria, Emiliano Zapata, Morelos"> Alcance Victoria, Emiliano Zapata, Morelos </option>
+                        <option value="Alcance Victoria, Ensenada, B.C."> Alcance Victoria, Ensenada, B.C. </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Aragon)"> Alcance Victoria, Estado de Mexico (Aragon) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Chimalhuacan)"> Alcance Victoria, Estado de Mexico (Chimalhuacan) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Las Palomas)"> Alcance Victoria, Estado de Mexico (Las Palomas) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Lazaro Cardenas)"> Alcance Victoria, Estado de Mexico (Lazaro Cardenas) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Naucalpan)"> Alcance Victoria, Estado de Mexico (Naucalpan) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Nezahualcoyotl Norte)"> Alcance Victoria, Estado de Mexico (Nezahualcoyotl Norte) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Nezahualcoyotl)"> Alcance Victoria, Estado de Mexico (Nezahualcoyotl) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (San Agustin)"> Alcance Victoria, Estado de Mexico (San Agustin) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Toluca)"> Alcance Victoria, Estado de Mexico (Toluca) </option>
+                        <option value="Alcance Victoria, Estado de Mexico (Valle de Chalco)"> Alcance Victoria, Estado de Mexico (Valle de Chalco) </option>
+                        <option value="Alcance Victoria, Guadalajara, Jalisco"> Alcance Victoria, Guadalajara, Jalisco </option>
+                        <option value="Alcance Victoria, Hermosillo (Norte) Sonora"> Alcance Victoria, Hermosillo (Norte) Sonora </option>
+                        <option value="Alcance Victoria, Hermosillo, Sonora"> Alcance Victoria, Hermosillo, Sonora </option>
+                        <option value="Alcance Victoria, Irapuato, Guanajuato"> Alcance Victoria, Irapuato, Guanajuato </option>
+                        <option value="Alcance Victoria, Jerez, Zacatecas"> Alcance Victoria, Jerez, Zacatecas </option>
+                        <option value="Alcance Victoria, Jiutepec, Morelos"> Alcance Victoria, Jiutepec, Morelos </option>
+                        <option value="Alcance Victoria, Juarez (Norte), Chihuahua"> Alcance Victoria, Juarez (Norte), Chihuahua </option>
+                        <option value="Alcance Victoria, Leon, Guanajuato"> Alcance Victoria, Leon, Guanajuato </option>
+                        <option value="Alcance Victoria, Los Mochis, Sinaloa"> Alcance Victoria, Los Mochis, Sinaloa </option>
+                        <option value="Alcance Victoria, Mazatlan, Sinaloa"> Alcance Victoria, Mazatlan, Sinaloa </option>
+                        <option value="Alcance Victoria, Merida (Poniente), Yucatan"> Alcance Victoria, Merida (Poniente), Yucatan </option>
+                        <option value="Alcance Victoria, Merida, Yucatan"> Alcance Victoria, Merida, Yucatan </option>
+                        <option value="Alcance Victoria, Merida, Yucatan"> Alcance Victoria, Merida, Yucatan </option>
+                        <option value="Alcance Victoria, Mexicali (Centro)"> Alcance Victoria, Mexicali (Centro) </option>
+                        <option value="Alcance Victoria, Mexicali (Este)"> Alcance Victoria, Mexicali (Este) </option>
+                        <option value="Alcance Victoria, Mexicali (Hidalgo)"> Alcance Victoria, Mexicali (Hidalgo) </option>
+                        <option value="Alcance Victoria, Mexico D.F. (Balbuena)"> Alcance Victoria, Mexico D.F. (Balbuena) </option>
+                        <option value="Alcance Victoria, Mexico D.F. (Iztacalco)"> Alcance Victoria, Mexico D.F. (Iztacalco) </option>
+                        <option value="Alcance Victoria, Mexico D.F. (Iztapalapa)"> Alcance Victoria, Mexico D.F. (Iztapalapa) </option>
+                        <option value="Alcance Victoria, Monterrey (Guadalupe) Nuevo Leon"> Alcance Victoria, Monterrey (Guadalupe) Nuevo Leon </option>
+                        <option value="Alcance Victoria, Monterrey, Nuevo Leon"> Alcance Victoria, Monterrey, Nuevo Leon </option>
+                        <option value="Alcance Victoria, Morelia, Michoacan"> Alcance Victoria, Morelia, Michoacan </option>
+                        <option value="Alcance Victoria, Nogales, Sonora"> Alcance Victoria, Nogales, Sonora </option>
+                        <option value="Alcance Victoria, Nuevo Laredo, Tamaulipas"> Alcance Victoria, Nuevo Laredo, Tamaulipas </option>
+                        <option value="Alcance Victoria, Oaxaca, Oaxaca"> Alcance Victoria, Oaxaca, Oaxaca </option>
+                        <option value="Alcance Victoria, Obregon, Sonora"> Alcance Victoria, Obregon, Sonora </option>
+                        <option value="Alcance Victoria, Playa Del Carmen, Quintana Roo"> Alcance Victoria, Playa Del Carmen, Quintana Roo </option>
+                        <option value="Alcance Victoria, Puebla, Puebla"> Alcance Victoria, Puebla, Puebla </option>
+                        <option value="Alcance Victoria, Queretaro, Queretaro"> Alcance Victoria, Queretaro, Queretaro </option>
+                        <option value="Alcance Victoria, Rosarito"> Alcance Victoria, Rosarito </option>
+                        <option value="Alcance Victoria, San Luis Potosi, S.L.P."> Alcance Victoria, San Luis Potosi, S.L.P. </option>
+                        <option value="Alcance Victoria, San Luis Rio Colorado, Sonora"> Alcance Victoria, San Luis Rio Colorado, Sonora </option>
+                        <option value="Alcance Victoria, San Pablo Xochimehuacan, Puebla"> Alcance Victoria, San Pablo Xochimehuacan, Puebla </option>
+                        <option value="Alcance Victoria, Tecate, B.C."> Alcance Victoria, Tecate, B.C. </option>
+                        <option value="Alcance Victoria, Tehuacan, Puebla"> Alcance Victoria, Tehuacan, Puebla </option>
+                        <option value="Alcance Victoria, Tepic, Nayarit"> Alcance Victoria, Tepic, Nayarit </option>
+                        <option value="Alcance Victoria, Tijuana (Centro) B.C."> Alcance Victoria, Tijuana (Centro) B.C. </option>
+                        <option value="Alcance Victoria, Tijuana (Francisco Villa) B.C."> Alcance Victoria, Tijuana (Francisco Villa) B.C. </option>
+                        <option value="Alcance Victoria, Tijuana (Norte) B.C."> Alcance Victoria, Tijuana (Norte) B.C. </option>
+                        <option value="Alcance Victoria, Tijuana Libertad B.C. (English)"> Alcance Victoria, Tijuana Libertad B.C. (English) </option>
+                        <option value="Alcance Victoria, Tlaxcala (Sur), Tlaxcala"> Alcance Victoria, Tlaxcala (Sur), Tlaxcala </option>
+                        <option value="Alcance Victoria, Tlaxcala, Tlaxcala"> Alcance Victoria, Tlaxcala, Tlaxcala </option>
+                        <option value="Alcance Victoria, Torreon, Coahuila"> Alcance Victoria, Torreon, Coahuila </option>
+                        <option value="Alcance Victoria, Tulum, Quintana Roo"> Alcance Victoria, Tulum, Quintana Roo </option>
+                        <option value="Alcance Victoria, Uman, Yucatan"> Alcance Victoria, Uman, Yucatan </option>
+                        <option value="Alcance Victoria, Valladolid, Yucatan"> Alcance Victoria, Valladolid, Yucatan </option>
+                        <option value="Alcance Victoria, Villahermosa, Tabasco"> Alcance Victoria, Villahermosa, Tabasco </option>
+                        <option value="Alcance Victoria, Zacatecas, Zacatecas"> Alcance Victoria, Zacatecas, Zacatecas </option>
+                        <option value="Alcance Victoria, Zamora, Michoacan"> Alcance Victoria, Zamora, Michoacan </option>
+                        <option value="Alcance Victoria, Zapopan, Jalisco"> Alcance Victoria, Zapopan, Jalisco </option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
+            </div>
+            <div id="verificaDatos">
+                <button type="submit" onclick="verificandoDatos(); return false;">Siguiente</button>
+            </div>
+            
+            <div id="regresaIngresa">
+                <button type="submit" onclick="regresaLlenado(); return false;" >Corregir datos</button>
+            </div>
+            
+            <div id="continuaPago">
+                <button id="continuaBancomer" onClick="javascript:rdy();" type="submit">Continuar</button>
+            </div>
+        </form>
+    </div>
+  
+
+
+  </div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+    <iframe name="frame1" width="620" height="500" scrolling="no"></iframe>
+
+
+  <div id="pie">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
+    <p id="u1690-" style="color: #000133">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
+    Precio despues del 25 de Julio sera Normal ($ 600.00 mn)<br>
+    Los precios son en Pesos Méxicanos,El registro no es tranferible. <br>
+    El pago no es rembolsable por cancelación.<br>
+    Mas Información en: info@alcancevictoriamexico.org<br>
+    Alcance Victoria de México, A.C.Calle 10, Z.C., Tijuana, B.C. Tel: 01 664 638.2308    </p>
+    <p>&nbsp;</p>
+  </div>
+</div>
+
+  <script>
+          /*var divSiguiente = document.getElementById('verificaDatos');
+          var divPago = document.getElementById('continuaPago');
+          var divAtras = document.getElementById('regresaIngresa');*/
+          function verificandoDatos(){
+              var nombres = document.getElementById('nombres').value;
+              var apellidos = document.getElementById('apellidos').value;
+              var email = document.getElementById('email').value;
+              var telefono = document.getElementById('telefono').value;
+              var iglesias = document.getElementById('iglesias');
+              var iglesiaSeleccionada = iglesias.options[iglesias.selectedIndex].value;
+
+              document.getElementById('desplegaNombre').style.display = "inline-block";
+              document.getElementById('desplegaNombre').style.color = "#ffffff";
+              document.getElementById('desplegaNombre').innerHTML = nombres;
+
+              document.getElementById('desplegaApellidos').style.display = "inline-block";
+              document.getElementById('desplegaApellidos').style.color = "#ffffff";
+              document.getElementById('desplegaApellidos').innerHTML = apellidos;
+
+              document.getElementById('desplegaEmail').style.display = "inline-block";
+              document.getElementById('desplegaEmail').style.color = "#ffffff";
+              document.getElementById('desplegaEmail').innerHTML = email;
+
+              document.getElementById('desplegaTelefono').style.display = "inline-block";
+              document.getElementById('desplegaTelefono').style.color = "#ffffff";
+              document.getElementById('desplegaTelefono').innerHTML = telefono;;
+
+              document.getElementById('desplegaIglesia').style.display = "inline-block";
+              document.getElementById('desplegaIglesia').style.color = "#ffffff";
+              document.getElementById('desplegaIglesia').innerHTML = iglesiaSeleccionada;
+
+              document.getElementById('nombres').style.display = "none";
+              document.getElementById('apellidos').style.display = "none";
+              document.getElementById('email').style.display = "none";
+              document.getElementById('telefono').style.display = "none";
+              document.getElementById('iglesias').style.display = "none";
+              document.getElementById('continuaPago').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "inline-block";
+              document.getElementById('verificaDatos').style.display = "none";
+          }
+
+          function regresaLlenado(){
+              document.getElementById('desplegaNombre').style.display = "none";
+              document.getElementById('desplegaApellidos').style.display = "none";
+              document.getElementById('desplegaEmail').style.display = "none";
+              document.getElementById('desplegaTelefono').style.display = "none"
+              document.getElementById('desplegaIglesia').style.display = "none";
+
+              document.getElementById('nombres').style.display = "inline-block";
+              document.getElementById('apellidos').style.display = "inline-block";
+              document.getElementById('email').style.display = "inline-block";
+              document.getElementById('telefono').style.display = "inline-block";
+              document.getElementById('iglesias').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "none";
+          }
+
+  </script>
+</body>
+</html>
