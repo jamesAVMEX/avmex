@@ -102,5 +102,74 @@ function submitir(conTarjeta)
 
   <iframe name="frame1" width="620" height="500" scrolling="yes" marginwidth="0" marginheight="0">
   </iframe>
+  <div id="pie">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
+    <p id="u1690-" style="color: #000133">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
+    Precio despues del 25 de Julio sera Normal ($ 600.00 mn)<br>
+    Los precios son en Pesos Méxicanos,El registro no es tranferible. <br>
+    El pago no es rembolsable por cancelación.<br>
+    Mas Información en: info@alcancevictoriamexico.org<br>
+    Alcance Victoria de México, A.C.Calle 10, Z.C., Tijuana, B.C. Tel: 01 664 638.2308    </p>
+    <p>&nbsp;</p>
+  </div>
+</div>
 
-</BODY></HTML>
+  <script>
+          /*var divSiguiente = document.getElementById('verificaDatos');
+          var divPago = document.getElementById('continuaPago');
+          var divAtras = document.getElementById('regresaIngresa');*/
+          function verificandoDatos(){
+              var nombres = document.getElementById('nombres').value;
+              var apellidos = document.getElementById('apellidos').value;
+              var email = document.getElementById('email').value;
+              var telefono = document.getElementById('telefono').value;
+              var iglesias = document.getElementById('iglesias');
+              var iglesiaSeleccionada = iglesias.options[iglesias.selectedIndex].value;
+
+              document.getElementById('desplegaNombre').style.display = "inline-block";
+              document.getElementById('desplegaNombre').style.color = "#ffffff";
+              document.getElementById('desplegaNombre').innerHTML = nombres;
+
+              document.getElementById('desplegaApellidos').style.display = "inline-block";
+              document.getElementById('desplegaApellidos').style.color = "#ffffff";
+              document.getElementById('desplegaApellidos').innerHTML = apellidos;
+
+              document.getElementById('desplegaEmail').style.display = "inline-block";
+              document.getElementById('desplegaEmail').style.color = "#ffffff";
+              document.getElementById('desplegaEmail').innerHTML = email;
+
+              document.getElementById('desplegaTelefono').style.display = "inline-block";
+              document.getElementById('desplegaTelefono').style.color = "#ffffff";
+              document.getElementById('desplegaTelefono').innerHTML = telefono;;
+
+              document.getElementById('desplegaIglesia').style.display = "inline-block";
+              document.getElementById('desplegaIglesia').style.color = "#ffffff";
+              document.getElementById('desplegaIglesia').innerHTML = iglesiaSeleccionada;
+
+              document.getElementById('nombres').style.display = "none";
+              document.getElementById('apellidos').style.display = "none";
+              document.getElementById('email').style.display = "none";
+              document.getElementById('telefono').style.display = "none";
+              document.getElementById('iglesias').style.display = "none";
+              document.getElementById('continuaPago').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "inline-block";
+              document.getElementById('verificaDatos').style.display = "none";
+          }
+
+          function regresaLlenado(){
+              document.getElementById('desplegaNombre').style.display = "none";
+              document.getElementById('desplegaApellidos').style.display = "none";
+              document.getElementById('desplegaEmail').style.display = "none";
+              document.getElementById('desplegaTelefono').style.display = "none"
+              document.getElementById('desplegaIglesia').style.display = "none";
+
+              document.getElementById('nombres').style.display = "inline-block";
+              document.getElementById('apellidos').style.display = "inline-block";
+              document.getElementById('email').style.display = "inline-block";
+              document.getElementById('telefono').style.display = "inline-block";
+              document.getElementById('iglesias').style.display = "inline-block";
+              document.getElementById('regresaIngresa').style.display = "none";
+          }
+
+  </script>
+</BODY>
+</HTML>
