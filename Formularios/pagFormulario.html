@@ -219,13 +219,17 @@ function submitir(conTarjeta)
                 <div>
                     <p id="cantidad">Total a pagar <a id="totalPagar">$500.00 mxn</a></p>
                 </div>
+
                 <div id="verificaDatos">
-                    <!--<button type="submit" onclick="verificandoDatos();">Siguiente</button>-->
-                    <button type="submit" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">Siguiente</button>
+                    <button  type="submit" onClick="verificandoDatos();">Continuar</button>
                 </div>
-            
+
                 <div id="regresaIngresa">
                     <button type="submit" onclick="regresaLlenado(); return false;" >Corregir datos</button>
+                </div>
+
+                <div id="continuaPago">
+                    <button id="botonBancomer" type="submit" Value="Continuar" onClick="javascript:carga();javascript:submitir(false);">Siguiente</button>
                 </div>
 
                 <br>

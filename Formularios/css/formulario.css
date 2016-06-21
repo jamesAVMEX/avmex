@@ -8,6 +8,13 @@ html{
 
 #verificaDatos{
     display: inline;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#botonBancomer{
+    cursor: pointer;
+    cursor: hand;
 }
 
 #desplegaNombre{
@@ -27,9 +34,13 @@ html{
 }
 #continuaPago{
     display: none;
+    cursor: pointer;
+    cursor: hand;
 }
 #regresaIngresa{
     display: none;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .form-validation{
