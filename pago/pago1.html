@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
+<SCRIPT language=JavaScript src="./scripts/sha1.js"></SCRIPT>
 <link href="estilos.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 body {
@@ -12,37 +13,129 @@ body {
 }
 </style>
 <script type="text/javascript">
-function MM_swapImgRestore() { //v3.0
-  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-}
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-
-function MM_findObj(n, d) { //v4.01
-  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-  if(!x && d.getElementById) x=d.getElementById(n); return x;
+  function fecha(){
+    today = new Date();
+    var x=String(today.getFullYear()).substr(3,4);
+    if(String(today.getMonth()+1).length<2)
+        x=x+"0";
+    x=x+String(today.getMonth()+1);
+    if(String(today.getDate()).length<2)
+        x=x+"0";
+    x=x+String(today.getDate());
+    return x;
 }
 
-function MM_swapImage() { //v3.0
-  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+function hora(){
+    today = new Date();
+    y = new String();
+    if(String(today.getHours()).length<2)
+        y="0";
+    y=y+String(today.getHours());
+    if(String(today.getMinutes()).length<2)
+        y=y+"0";
+    y=y+String(today.getMinutes());
+    if(String(today.getSeconds()).length<2)
+        y=y+"0";
+    y=y+String(today.getSeconds());
+    return y
 }
+
+function carga()
+{
+  document.clasico.Ds_Merchant_Order.value=fecha()+hora();
+}
+
+
+
+function submitir(conTarjeta)
+{
+  document.clasico.Ds_Merchant_Currency.value=484;
+  document.clasico.Ds_Merchant_ProductDescription.value = document.getElementById("Concepto").innerHTML;
+  document.clasico.Ds_Merchant_Amount.value=100;
+  document.clasico.Ds_Merchant_MerchantCode.value=4083194;
+  document.clasico.Ds_Merchant_Terminal.value=1;
+
+  console.log(document.clasico.Ds_Merchant_Amount.value);
+  console.log(document.clasico.Ds_Merchant_Currency.value);
+  console.log(document.clasico.Ds_Merchant_MerchantCode.value);
+  console.log(document.clasico.Ds_Merchant_Terminal.value);
+  console.log(document.clasico.Ds_Merchant_TransactionType.value);
+  console.log(document.clasico.Ds_Merchant_Order.value);
+  console.log(document.clasico.Ds_Merchant_MerchantName.value);
+  console.log(document.clasico.Ds_Merchant_ProductDescription.value);
+
+
+    x=document.clasico.Ds_Merchant_Amount.value+document.clasico.Ds_Merchant_Order.value+document.clasico.Ds_Merchant_MerchantCode.value+document.clasico.Ds_Merchant_Currency.value+document.clasico.Ds_Merchant_TransactionType.value;
+
+    if(conTarjeta)
+        x+=document.clasico.Ds_Merchant_Pan.value;
+        y=hash(x + '4lc0n3vct3wq1fh9zm6k'); // Password Alcance Victoria
+        
+
+    document.clasico.Ds_Merchant_MerchantSignature.value=y;
+    console.log(document.clasico.Ds_Merchant_MerchantSignature.value);
+  if(conTarjeta)
+        document.clasico.action="https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge";
+        else
+        document.clasico.action="https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge";
+        document.clasico.submit();
+}
+
+
+  function MM_swapImgRestore() { //v3.0
+    var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+  }
+  function MM_preloadImages() { //v3.0
+    var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+      var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+      if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+  }
+
+  function MM_findObj(n, d) { //v4.01
+    var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+      d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+    if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+    for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+    if(!x && d.getElementById) x=d.getElementById(n); return x;
+  }
+
+  function MM_swapImage() { //v3.0
+    var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+     if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+  }
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('imagenes/boton_pagar_off.jpg')">
+<body onLoad="MM_preloadImages('imagenes/boton_pagar_off.jpg');javascript:carga();javascript:submitir(false);">
 <div id="todo">
   <div id="top1"><img src="imagenes/top1.jpg" width="1199" height="180" alt=""/></div>
   <div id="Tex_conf"><img src="imagenes/tex_conf.jpg" width="1200" height="100" alt=""/></div>
   <div id="pasos"><img src="imagenes/pasos.jpg" width="1200" height="50" alt=""/></div>
-  <div id="boton"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','imagenes/boton_pagar_off.jpg',1)"><img src="imagenes/boton_pagar_on.jpg" alt="" width="150" height="50" id="Image4"></a></div>
-  <div id="contenido"></div>
+  <div>
+     <form action=https://ecom.eglobal.com.mx/VPBridgeWeb/servlets/TransactionStartBridge method=post class="form-validation" name=clasico target=frame1>
+                
+                    <h1 id="Concepto">Conferencia Nacional 2016</h1>
+               
+                <INPUT name=Ds_Merchant_Amount type="hidden"/>
+                <INPUT name=Ds_Merchant_Currency type="hidden"/>
+                <INPUT name=Ds_Merchant_MerchantCode type="hidden"/>
+                <INPUT name=Ds_Merchant_Terminal type="hidden"/>
+                <INPUT name=Ds_Merchant_MerchantSignature type="hidden"/>
+                <INPUT name=Ds_Merchant_MerchantData type="hidden" value="dato"/>
+                <INPUT name="Ds_Merchant_TransactionType" type="hidden" value="0"/>
+                <INPUT name=Ds_Merchant_Order type="hidden"/>
+                <INPUT name=Ds_Merchant_MerchantName type="hidden" value="Alcance Victoria" />
+                <INPUT name=Ds_Merchant_ProductDescription type="hidden"/>
+                <INPUT name=Ds_Merchant_MerchantURL type="hidden" value="https://www.alcancevictoriamexico.org/Formularios/pagFormulario.html" />   
+                <INPUT name=Ds_Merchant_UrlOK type=hidden value=https://www.alcancevictoriamexico.org/aprobado.html />
+                <INPUT name=Ds_Merchant_UrlKO type=hidden value=https://www.alcancevictoriamexico.org/denegado.html />    
+            </form>
+  </div>
+
+
+  <div id="contenido">
+    <iframe name="frame1" width="620" height="525" scrolling="yes" marginwidth="0" marginheight="0" frameborder="0"> </iframe>
+  </div>
   <div id="terminos">Al registrarse esta de acuerdo con los terminos y condiciones.<br>
     <p id="u1690-">Preregistro Valido al 25 de Julio de 2016, ($ 500.00 mn)<br>
       Precio despues del 25 de Julio sera Normal ($ 600.00 mn)<br>

@@ -7,6 +7,9 @@
 	top: 0px;
 	text-align: center;
 }
+#Concepto{
+	display: none;
+}
 #contenido {
 	background-image: url(imagenes/conf_fondo.jpg);
 	width: 1200px;
