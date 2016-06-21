@@ -1,0 +1,32 @@
+@charset "utf-8";
+#todo {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	top: 0px;
+	text-align: center;
+}
+#contenido {
+	background-image: url(imagenes/conf_fondo.jpg);
+	width: 1200px;
+	height: 1091px;
+}
+#todo #top1 {
+	width: 1200px;
+	height: 180px;
+}
+#todo #boton {
+	width: 1200px;
+	height: 50px;
+}
+
+#todo #pasos {
+	width: 1200px;
+	height: 50px;
+}
+
+#todo #Tex_conf {
+	width: 1200px;
+	height: 100px;
+}
